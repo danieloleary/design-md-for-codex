@@ -7,11 +7,12 @@ colors:
   background: "#F5F4ED"
   surface: "#FAF9F5"
   text: "#141413"
-  dark-text: "rgba(255,255,255,1)"
-  dark-muted: "rgba(255,255,255,0.68)"
+  dark-text: "#FFFFFF"
+  dark-muted: "#B8B8B8"
   muted: "#87867F"
   border: "#E7EBEF"
-  dark-border: "rgba(255,255,255,0.12)"
+  dark-border: "#2A2C30"
+  primary: "#9F442B"
   accent: "#C96442"
 typography:
   body:

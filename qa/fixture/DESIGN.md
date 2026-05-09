@@ -6,10 +6,11 @@ colors:
   surface: "#17191D"
   paper: "#F5F4ED"
   text: "#FFFFFF"
-  muted: "rgba(255,255,255,0.68)"
+  muted: "#B8B8B8"
   ink: "#141413"
+  primary: "#9F442B"
   accent: "#9F442B"
-  border: "rgba(255,255,255,0.12)"
+  border: "#2A2C30"
 typography:
   body:
     fontFamily: Inter, ui-sans-serif, system-ui, sans-serif
@@ -38,4 +39,3 @@ Rules:
 - Keep border radius at 8px or less.
 - Keep controls compact and readable.
 - Verify the page works at mobile and desktop widths.
-
