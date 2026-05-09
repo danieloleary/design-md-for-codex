@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read troubleshooting
+    url: https://github.com/danieloleary/design-md-for-codex/blob/main/TROUBLESHOOTING.md
+    about: Start here for install, DESIGN.md, and visual QA issues.

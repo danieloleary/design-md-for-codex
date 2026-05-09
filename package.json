@@ -1,0 +1,12 @@
+{
+  "name": "design-md-for-codex",
+  "private": true,
+  "version": "0.1.4",
+  "description": "A Codex skill showcase that makes agents read DESIGN.md before frontend UI work.",
+  "scripts": {
+    "visual-qa": "node qa/visual-qa.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.57.0"
+  }
+}

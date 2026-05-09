@@ -1,0 +1,17 @@
+name: Docs fix
+description: Something in the README, launch docs, QA docs, or examples is confusing.
+title: "Docs: "
+labels: ["docs"]
+body:
+  - type: textarea
+    id: confusing
+    attributes:
+      label: What was confusing?
+      placeholder: "Paste the line, section, or link that slowed you down."
+    validations:
+      required: true
+  - type: textarea
+    id: better
+    attributes:
+      label: What would make it clearer?
+      placeholder: "A shorter instruction, screenshot, command, example, or different wording."

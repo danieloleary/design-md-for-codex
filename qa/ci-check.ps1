@@ -56,6 +56,7 @@ function Assert-NoEncodingArtifacts($Path) {
 
 try {
   Step "Checking CI tooling"
+  Require-Command "node"
   Require-Command "npx"
   Require-Command "Expand-Archive"
 
@@ -77,6 +78,17 @@ try {
     "LAUNCH-TRACKER.md",
     "SHARE.md",
     "MAINTENANCE-CHECKLIST.md",
+    "TROUBLESHOOTING.md",
+    "FAQ.md",
+    "package.json",
+    "package-lock.json",
+    "qa/visual-qa.mjs",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/install-bug.yml",
+    ".github/ISSUE_TEMPLATE/skill-bug.yml",
+    ".github/ISSUE_TEMPLATE/docs.yml",
+    ".github/ISSUE_TEMPLATE/example-request.yml",
     "skills/design-system/SKILL.md",
     "skills/design-system/agents/openai.yaml",
     "skills/design-system/references/DESIGN.md",
@@ -154,6 +166,8 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH-TRACKER.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "SHARE.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "MAINTENANCE-CHECKLIST.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "TROUBLESHOOTING.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "FAQ.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"
@@ -167,6 +181,11 @@ try {
   Step "Parsing tokens"
   Get-Content (Join-Path $RepoRoot "skills/design-system/references/tokens.json") | ConvertFrom-Json | Out-Null
   Write-Host "OK tokens.json parses"
+
+  Step "Parsing Node package metadata"
+  & node -e "JSON.parse(require('fs').readFileSync(process.argv[1], 'utf8')); JSON.parse(require('fs').readFileSync(process.argv[2], 'utf8'))" (Join-Path $RepoRoot "package.json") (Join-Path $RepoRoot "package-lock.json")
+  if ($LASTEXITCODE -ne 0) { throw "Package metadata JSON parse failed." }
+  Write-Host "OK package metadata parses"
 
   Step "Checking public GitHub and Pages URLs"
   Assert-Url "$PagesRoot/" "Dan O'Leary"

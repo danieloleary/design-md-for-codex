@@ -9,6 +9,7 @@ Codex changes fast. This repo should keep proving the same thing: the skill inst
 - Check the latest `Stay current` GitHub Action.
 - Run `.\qa\ci-check.ps1`.
 - Run `.\qa\smoke-test.ps1`.
+- Run `npm run visual-qa` after landing page, image, or copy-button changes.
 - Confirm the live site loads: https://danieloleary.github.io/design-md-for-codex/
 - Confirm the install prompt still works:
 
@@ -19,7 +20,7 @@ Codex changes fast. This repo should keep proving the same thing: the skill inst
 - Search public files for private/internal launch notes before posting. Keep internal helper names, private execution notes, and unpublished automation details out of public docs.
 
   ```powershell
-  rg -n "PRIVATE|INTERNAL|DO NOT PUBLISH|launch desk" README.md index.html LAUNCH.md LAUNCH-TRACKER.md SHARE.md
+  rg -n "internal-only|private-helper|launch desk" README.md index.html LAUNCH.md LAUNCH-TRACKER.md SHARE.md
   ```
 
 ## Monthly
@@ -42,6 +43,7 @@ Codex changes fast. This repo should keep proving the same thing: the skill inst
   ```powershell
   .\qa\ci-check.ps1
   .\qa\smoke-test.ps1
+  npm run visual-qa
   python $env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py skills\design-system
   git diff --check
   ```

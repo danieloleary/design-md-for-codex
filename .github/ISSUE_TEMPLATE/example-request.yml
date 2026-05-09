@@ -1,0 +1,25 @@
+name: Example request
+description: Request a framework, repo shape, or DESIGN.md example.
+title: "Example request: "
+labels: ["example"]
+body:
+  - type: dropdown
+    id: example-type
+    attributes:
+      label: Example type
+      options:
+        - React / Vite
+        - Next.js
+        - Tailwind
+        - shadcn/ui
+        - Plain HTML/CSS
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would this help?
+      placeholder: "What are you trying to copy, test, or teach Codex?"
+    validations:
+      required: true

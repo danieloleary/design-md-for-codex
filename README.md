@@ -83,6 +83,15 @@ Run the local smoke test:
 
 Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and the bundled Codex `skill-installer` and `skill-creator` helpers.
 
+Run browser QA when the landing page, copy button, or images change:
+
+```powershell
+npm install
+npm run visual-qa
+```
+
+Screenshots and metrics are written to `output/browser-qa/`.
+
 ## Staying Current
 
 Codex moves fast. This repo checks itself every day:
@@ -93,11 +102,15 @@ Codex moves fast. This repo checks itself every day:
 
 It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, generated assets, and common encoding problems. See `MAINTAINING.md` and `MAINTENANCE-CHECKLIST.md`.
 
+If something feels off, start with `TROUBLESHOOTING.md` or `FAQ.md`.
+
 ## Share It
 
 Launch assets and ready-to-post copy live in `LAUNCH.md`. Distribution targets and follow-up catalog paths live in `SHARE.md`. A simple launch tracker lives in `LAUNCH-TRACKER.md`.
 
 The primary install path is this GitHub skill folder. Plugin packaging and an `openai/skills` catalog contribution are future distribution steps.
+
+GitHub issue templates are included for install bugs, skill behavior bugs, docs fixes, and example requests.
 
 ## Customize
 

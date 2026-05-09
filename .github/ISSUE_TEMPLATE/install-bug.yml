@@ -1,0 +1,46 @@
+name: Install bug
+description: The GitHub install path, skill installer, or skill discovery did not work.
+title: "Install bug: "
+labels: ["bug", "install"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing this. Install friction is the highest-priority bug class.
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11, macOS, Linux..."
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Install prompt used
+      description: Paste the exact prompt or command you used.
+      value: "Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system"
+    validations:
+      required: true
+  - type: dropdown
+    id: restarted
+    attributes:
+      label: Did you restart Codex after installing?
+      options:
+        - "Yes"
+        - "No"
+        - "Not sure"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened?
+      placeholder: "What did Codex say? Did the skill appear? Any error text?"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Add screenshots, terminal output, or the Codex response if useful.

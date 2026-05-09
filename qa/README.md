@@ -76,6 +76,24 @@ The repo includes one captured proof run:
 - `../assets/proof/ai-workbench-wide.png`: generated workbench image used in the after proof.
 - `../assets/proof/ai-workbench-detail.png`: generated detail image used in the after proof.
 
+## Visual QA
+
+Run from the repo root after landing page, image, or copy-button changes:
+
+```powershell
+npm install
+npm run visual-qa
+```
+
+The script starts a local static server, opens the page in Playwright Chromium, and checks:
+
+- widths `320`, `390`, `768`, `1024`, and `1440`
+- no horizontal overflow
+- no broken images
+- copy button status changes after click
+
+Screenshots and metrics are written to `output/browser-qa/`.
+
 ## Launch Images
 
 Regenerate the sharing kit after proof screenshots or launch copy change:
