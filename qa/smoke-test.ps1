@@ -50,6 +50,7 @@ try {
   Require-File (Join-Path $RepoRoot "assets\repo-banner.png")
   Require-File (Join-Path $RepoRoot "assets\share-before-after.png")
   Require-File (Join-Path $RepoRoot "LAUNCH.md")
+  Require-File (Join-Path $RepoRoot "LAUNCH-TRACKER.md")
   Require-File (Join-Path $RepoRoot "SHARE.md")
   Require-File (Join-Path $RepoRoot "TEDDY-LAUNCH.md")
 

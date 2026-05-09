@@ -119,6 +119,7 @@ nav {
 .proof,
 .test,
 .files,
+.launch,
 .maker {
   width: 100%;
   margin: 0;
@@ -266,6 +267,7 @@ pre {
 .proof,
 .test,
 .files,
+.launch,
 .maker {
   color: var(--ink);
   background: var(--paper);
@@ -282,6 +284,7 @@ pre {
 .proof h2,
 .test h2,
 .files h2,
+.launch h2,
 .maker h2 {
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.08;
@@ -292,6 +295,7 @@ pre {
 .proof p,
 .test p,
 .files p,
+.launch p,
 .maker p {
   margin-top: 12px;
   color: var(--ink-muted);
@@ -349,6 +353,7 @@ pre {
 .proof,
 .test,
 .files,
+.launch,
 .maker {
   border-top: 1px solid var(--paper-line);
 }
@@ -439,6 +444,62 @@ pre {
   align-items: start;
 }
 
+.launch {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(24px, 5vw, 54px);
+  align-items: start;
+}
+
+.launch-console {
+  padding: 20px;
+  border: 1px solid var(--paper-line);
+  border-radius: 8px;
+  background: var(--paper-2);
+}
+
+.launch-console p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-weight: 760;
+}
+
+.launch-console pre {
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  background: var(--bg);
+}
+
+.launch-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--paper-line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--paper-2);
+}
+
+.launch-grid article {
+  padding: 20px;
+  border-right: 1px solid var(--paper-line);
+}
+
+.launch-grid article:last-child {
+  border-right: 0;
+}
+
+.launch-grid h3 {
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.launch .link-row {
+  grid-column: 1 / -1;
+  margin-top: 0;
+}
+
 .maker {
   max-width: none;
 }
@@ -477,7 +538,8 @@ pre {
   .hero,
   .why,
   .test,
-  .files {
+  .files,
+  .launch {
     grid-template-columns: 1fr;
   }
 
@@ -487,6 +549,7 @@ pre {
   .proof,
   .test,
   .files,
+  .launch,
   .maker {
     padding: 32px var(--gutter);
   }
@@ -504,6 +567,7 @@ pre {
 @media (max-width: 560px) {
   .reason-grid,
   .proof-grid,
+  .launch-grid,
   .proof-media {
     grid-template-columns: 1fr;
   }
@@ -513,13 +577,15 @@ pre {
   .reason-grid article:nth-last-child(-n + 2),
   .proof-grid article,
   .proof-grid article:nth-child(2n),
-  .proof-grid article:nth-last-child(-n + 2) {
+  .proof-grid article:nth-last-child(-n + 2),
+  .launch-grid article {
     border-right: 0;
     border-bottom: 1px solid var(--paper-line);
   }
 
   .reason-grid article:last-child,
-  .proof-grid article:last-child {
+  .proof-grid article:last-child,
+  .launch-grid article:last-child {
     border-bottom: 0;
   }
 }

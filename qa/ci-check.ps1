@@ -74,6 +74,7 @@ try {
     "assets/proof/ai-workbench-wide.png",
     "assets/proof/ai-workbench-detail.png",
     "LAUNCH.md",
+    "LAUNCH-TRACKER.md",
     "SHARE.md",
     "TEDDY-LAUNCH.md",
     "skills/design-system/SKILL.md",
@@ -150,6 +151,7 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "index.html")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "landing.css")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH-TRACKER.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "SHARE.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "TEDDY-LAUNCH.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")

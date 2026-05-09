@@ -63,6 +63,7 @@ Teddy should:
 - Prepare posts from `LAUNCH.md`.
 - Prepare the friend email below.
 - Create a simple tracker with columns: person/channel, sent, reply, action, follow-up date.
+- Use `LAUNCH-TRACKER.md` as the tracker template.
 - Ask Dan whether to launch today.
 
 ### Day 1: Public Launch
