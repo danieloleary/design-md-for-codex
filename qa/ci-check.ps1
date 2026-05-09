@@ -172,6 +172,8 @@ try {
   Assert-Url "$PagesRoot/assets/share-before-after.png"
   Assert-Url "$PagesRoot/assets/proof/fixture-before.png"
   Assert-Url "$PagesRoot/assets/proof/fixture-after.png"
+  Assert-Url "$PagesRoot/assets/proof/ai-workbench-wide.png"
+  Assert-Url "$PagesRoot/assets/proof/ai-workbench-detail.png"
   Assert-Url "$PagesRoot/LAUNCH.md" "Launch Plan"
   Assert-Url "$PagesRoot/SHARE.md" "Where To Share"
   Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
