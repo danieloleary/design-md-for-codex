@@ -91,7 +91,7 @@ Codex moves fast. This repo checks itself every day:
 .\qa\ci-check.ps1
 ```
 
-It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, generated assets, and common encoding problems. See `MAINTAINING.md`.
+It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, generated assets, and common encoding problems. See `MAINTAINING.md` and `MAINTENANCE-CHECKLIST.md`.
 
 ## Share It
 

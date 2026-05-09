@@ -19,11 +19,7 @@ Use this during launch to track channels, replies, follow-ups, and feedback wort
 ## Day 0 Approval Ping
 
 ```text
-Day 0 prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discord draft, and reply tracker.
-
-GitHub Actions are green. Pages is live. The install path works.
-
-Launch prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discord draft, and reply tracker.
+Day 0 prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discord draft, release notes, and reply tracker.
 
 GitHub Actions are green. Pages is live. The install path works.
 
@@ -34,13 +30,22 @@ Approve the channels you want to send now, or hold until tomorrow.
 
 | Channel | Owner | Asset | Status | Reply | Action | Follow-Up |
 | --- | --- | --- | --- | --- | --- | --- |
-| X | Dan / launch operator | `assets/share-before-after.png` | ready for approval |  | post after approval |  |
+| X | Dan | `assets/share-before-after.png` | ready for approval |  | post after approval |  |
 | LinkedIn | Dan | `assets/share-before-after.png` | handoff |  |  |  |
-| OpenAI Forum | Dan / launch operator | repo link | ready for approval |  | post after approval |  |
-| OpenAI Developers Discord | Dan / launch operator | repo link | ready for approval |  | post after approval |  |
-| Friend email | Dan / launch operator | repo link | ready for approval |  | email after approval |  |
+| OpenAI Forum | Dan | repo link | ready for approval |  | post after approval |  |
+| OpenAI Developers Discord | Dan | repo link | ready for approval |  | post after approval |  |
+| Friend email | Dan | repo link | ready for approval |  | email after approval |  |
 | GitHub release | Dan | release notes | live |  |  |  |
-| Skill directories | Dan / launch operator | repo link | queued |  | submit after approval |  |
+| Skill directories | Dan | repo link | queued |  | submit after approval |  |
+
+## Rollout Timeline
+
+| Window | Goal | Action | Done |
+| --- | --- | --- | --- |
+| Day 0 | First useful launch | X, GitHub release, friend DM, update tracker |  |
+| Day 1 | Explain the workflow | LinkedIn, OpenAI Forum/Discord, reply to install questions |  |
+| Day 3 | Show proof again | Before/after post, collect examples, open issues |  |
+| Day 7 | Build the community loop | Submit to directories, ask for examples, plan next release |  |
 
 ## Reply Queue
 
@@ -72,6 +77,16 @@ Approve the channels you want to send now, or hold until tomorrow.
 | X replies/reposts |  |  |  |
 | Email replies |  |  |  |
 | Forum/Discord reactions |  |  |  |
+
+## Feedback To Convert
+
+| Feedback | Source | Convert To | Owner | Done |
+| --- | --- | --- | --- | --- |
+| Install wording confused someone |  | README / site copy | Dan |  |
+| Skill did not load after restart |  | GitHub issue / smoke-test update | Dan |  |
+| DESIGN.md lint failed |  | docs fix / example fix | Dan |  |
+| User wants framework example |  | example repo | Dan / contributor |  |
+| Strong design critique |  | DESIGN.md update / visual pass | Dan |  |
 
 ## Next Actions
 

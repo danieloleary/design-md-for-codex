@@ -4,6 +4,8 @@ Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
 Codex moves fast. This repo stays useful by checking the public skill, the docs, and the design files every day.
 
+For the short maintainer checklist, see `MAINTENANCE-CHECKLIST.md`.
+
 ## Daily Drift Check
 
 `.github/workflows/stay-current.yml` runs every day and on every push. It checks that:
@@ -45,3 +47,7 @@ $design-system Make this page follow DESIGN.md.
 ```
 
 The result should pull the fixture away from its intentionally generic blue-gradient start and toward the local `DESIGN.md` rules.
+
+## Release Rule
+
+Cut a new release when a change makes the skill easier to install, easier to trust, easier to test, or easier to share. Keep small copy-only tweaks on `main` unless they change the launch packet or public instructions.

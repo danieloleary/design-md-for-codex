@@ -2,15 +2,67 @@
 
 Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
+## Launch Packet
+
+- Repo: https://github.com/danieloleary/design-md-for-codex
+- Live site: https://danieloleary.github.io/design-md-for-codex/
+- Install prompt:
+
+  ```text
+  Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+  ```
+
+- One-line pitch: Make Codex remember your taste. `DESIGN.md` is the memory. This skill is the habit.
+- Three-line pitch: Codex can build fast, but UI taste drifts without a source of truth. Put the rules in `DESIGN.md`. Install this skill so Codex reads those rules before building, reviewing, or refactoring UI.
+- Hero asset: `assets/social-card.png`
+- Proof asset: `assets/share-before-after.png`
+- Repo banner: `assets/repo-banner.png`
+- Best proof link: `qa/fixture/codex-result.md`
+- Maintenance proof: `MAINTENANCE-CHECKLIST.md`
+
+## Launch Calendar
+
+### Day 0: Ship The Useful Thing
+
+- Run `.\qa\ci-check.ps1` and `.\qa\smoke-test.ps1`.
+- Confirm GitHub Actions are green and Pages is live.
+- Post on X with `assets/share-before-after.png`.
+- Publish the GitHub release notes.
+- Send the short friend DM to 5-10 builders who will give real feedback.
+- Track every reply in `LAUNCH-TRACKER.md`.
+
+### Day 1: Explain The Habit
+
+- Post the LinkedIn version with the repo link and install prompt.
+- Share in OpenAI Forum or Discord with a direct ask for Codex skill feedback.
+- Reply to every install question with the same simple path: install, restart, add `DESIGN.md`, run `$design-system`.
+- Turn confusing replies into README fixes.
+
+### Day 3: Show The Proof
+
+- Share the before/after asset again with a shorter caption.
+- Ask for examples from people who tried it in real repos.
+- Open GitHub issues for bugs, install friction, or unclear docs.
+- Add one small improvement based on the strongest repeated question.
+
+### Day 7: Make It A Community Object
+
+- Submit to relevant skill and DESIGN.md directories from `SHARE.md`.
+- Ask for one contributor to add a framework-specific example.
+- Cut a follow-up release only if there is a real fix or useful example.
+- Update `LAUNCH-TRACKER.md` with what worked, what confused people, and what to build next.
+
 ## Launch Checklist
 
 - Confirm `.\qa\ci-check.ps1` and `.\qa\smoke-test.ps1` pass.
 - Confirm GitHub Pages shows the latest before/after proof.
+- Confirm `MAINTENANCE-CHECKLIST.md` still matches the workflow.
 - Attach `assets/social-card.png` to X and LinkedIn.
 - Attach `assets/share-before-after.png` when the post is about proof.
 - Link to the repo and the live showcase.
 - Pin the install prompt near the top of every long post.
 - Use `LAUNCH-TRACKER.md` to track channels, replies, follow-ups, and launch metrics.
+- Keep private helpers and internal execution notes out of the public repo.
 
 ## One-Liner
 
@@ -72,6 +124,51 @@ Repo:
 https://github.com/danieloleary/design-md-for-codex
 
 Would love feedback from anyone building UI with Codex, agent skills, or DESIGN.md files.
+
+## GitHub Release Copy
+
+`design-md-for-codex` is ready to try.
+
+It packages one Codex skill:
+
+```text
+skills/design-system
+```
+
+The skill makes Codex read `DESIGN.md` before UI work, then apply the repo's colors, type, spacing, component rules, accessibility notes, and no-go zones.
+
+This release includes:
+
+- GitHub install path.
+- Starter `DESIGN.md`, CSS theme, and design tokens.
+- Minimal repo example.
+- QA fixture with before/after proof.
+- Daily drift check for Codex and DESIGN.md changes.
+- Launch kit and sharing copy.
+
+Install:
+
+```text
+Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+```
+
+## Common Replies
+
+### What is DESIGN.md?
+
+`DESIGN.md` is a design system file that lives in the repo. It gives agents the rules they need to build UI without guessing: colors, type, spacing, components, accessibility, voice, and the stuff not to do.
+
+### Why a skill?
+
+Because rules only help if Codex reads them. The skill turns "please remember my taste" into a repeatable habit: find `DESIGN.md`, read it first, apply it, and verify the result.
+
+### Is this Dan's taste or mine?
+
+The starter has Dan's default taste: dark command surfaces, warm paper sections, terracotta accent, tight borders, no generic UI soup. Replace the `DESIGN.md` with your own taste and keep the habit.
+
+### Does it keep up with Codex changes?
+
+The repo has a daily GitHub Action plus local smoke tests. See `MAINTAINING.md` and `MAINTENANCE-CHECKLIST.md`.
 
 ## Friend DM
 

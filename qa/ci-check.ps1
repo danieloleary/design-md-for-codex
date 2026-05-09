@@ -76,6 +76,7 @@ try {
     "LAUNCH.md",
     "LAUNCH-TRACKER.md",
     "SHARE.md",
+    "MAINTENANCE-CHECKLIST.md",
     "skills/design-system/SKILL.md",
     "skills/design-system/agents/openai.yaml",
     "skills/design-system/references/DESIGN.md",
@@ -152,6 +153,7 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH-TRACKER.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "SHARE.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "MAINTENANCE-CHECKLIST.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"
