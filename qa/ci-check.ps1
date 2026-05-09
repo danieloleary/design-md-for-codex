@@ -62,6 +62,8 @@ try {
     "COPY.md",
     "index.html",
     "landing.css",
+    "assets/proof/fixture-before.png",
+    "assets/proof/fixture-after.png",
     "skills/design-system/SKILL.md",
     "skills/design-system/agents/openai.yaml",
     "skills/design-system/references/DESIGN.md",
@@ -71,6 +73,8 @@ try {
     "examples/minimal-repo/.agents/skills/design-system/SKILL.md",
     "qa/fixture/DESIGN.md",
     "qa/fixture/index.html",
+    "qa/fixture/after.html",
+    "qa/fixture/codex-result.md",
     "qa/fixture/expected.md",
     "qa/smoke-test.ps1"
   )

@@ -59,3 +59,13 @@ It checks:
    - no blue gradient
    - compact controls
    - no radius above 8px
+
+## Saved Proof Run
+
+The repo includes one captured proof run:
+
+- `fixture/index.html`: intentionally generic starting point.
+- `fixture/after.html`: output from a Codex run using `$design-system`.
+- `fixture/codex-result.md`: final Codex response.
+- `../assets/proof/fixture-before.png`: before screenshot.
+- `../assets/proof/fixture-after.png`: after screenshot.

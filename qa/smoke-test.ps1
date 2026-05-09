@@ -40,6 +40,10 @@ try {
   Require-File (Join-Path $RepoRoot "skills\design-system\references\tokens.json")
   Require-File (Join-Path $RepoRoot "qa\fixture\DESIGN.md")
   Require-File (Join-Path $RepoRoot "qa\fixture\index.html")
+  Require-File (Join-Path $RepoRoot "qa\fixture\after.html")
+  Require-File (Join-Path $RepoRoot "qa\fixture\codex-result.md")
+  Require-File (Join-Path $RepoRoot "assets\proof\fixture-before.png")
+  Require-File (Join-Path $RepoRoot "assets\proof\fixture-after.png")
 
   Step "Installing public GitHub skill into temp folder"
   if (-not (Test-Path -LiteralPath $Installer -PathType Leaf)) {

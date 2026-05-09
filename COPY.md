@@ -55,9 +55,12 @@ Proof:
 - Codex can build a decent screen and still invent new spacing, colors, cards, and shadows on the next one.
 - With it
 - Codex reads `DESIGN.md`, applies the tokens, follows the component rules, and checks desktop and mobile.
+- Before: generic UI
+- After: Codex read DESIGN.md
 - SKILL.md
 - DESIGN.md
 - Minimal example
+- Codex result
 
 Test:
 

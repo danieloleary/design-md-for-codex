@@ -39,6 +39,7 @@ The bundled `references/DESIGN.md` is a fallback starter: dark command surfaces,
    - Start the app's existing dev server if needed.
    - Use browser-based checks or screenshots at desktop and mobile widths.
    - Check for overflow, overlapping text, broken focus states, unreadable contrast, and layout shift.
+   - In the final response, name which design file you read and summarize the main rules you applied.
 
 ## Review Checklist
 
@@ -50,6 +51,7 @@ The bundled `references/DESIGN.md` is a fallback starter: dark command surfaces,
 - Color communicates state accessibly and never as the only signal.
 - Mobile and desktop layouts remain usable without text overlap.
 - No decorative gradients, blobs, nested cards, or invented visual systems were added unless the repo design file explicitly asks for them.
+- Final response confirms the `DESIGN.md` source and the design rules applied.
 
 ## Missing Or Incomplete Design Files
 

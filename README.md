@@ -37,6 +37,7 @@ The `design-system` skill makes Codex:
 3. Use documented colors, type, spacing, components, motion, and accessibility rules.
 4. Stop inventing a new visual system when the repo already has one.
 5. Check rendered UI on desktop and mobile when frontend code changes.
+6. Say which design file it read and what rules it applied.
 
 ## What Ships
 
@@ -72,6 +73,20 @@ Run the local smoke test:
 ```
 
 Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and recent Codex system skills.
+
+## Actual Codex Run
+
+I ran the published skill against `qa/fixture` in a throwaway copy.
+
+![Before: generic blue gradient UI](assets/proof/fixture-before.png)
+
+![After: Codex read DESIGN.md and applied the rules](assets/proof/fixture-after.png)
+
+Artifacts:
+
+- `qa/fixture/index.html`: reusable bad starting point.
+- `qa/fixture/after.html`: output from the Codex proof run.
+- `qa/fixture/codex-result.md`: final Codex response from the run.
 
 ## Staying Current
 

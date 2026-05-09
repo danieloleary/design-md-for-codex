@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design Skill QA Fixture</title>
+    <style>
+      :root {
+        --void: #0f1012;
+        --surface: #17191d;
+        --text: #ffffff;
+        --muted: #b8b8b8;
+        --accent: #9f442b;
+        --border: #2a2c30;
+        --radius-control: 6px;
+        --radius-panel: 8px;
+        --space-sm: 8px;
+        --space-md: 12px;
+        --space-lg: 16px;
+        --space-xl: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-width: 320px;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        color: var(--text);
+        background: var(--void);
+      }
+
+      main {
+        width: 100%;
+        max-width: 920px;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding: 56px var(--space-xl);
+        display: grid;
+        align-items: center;
+      }
+
+      .card {
+        width: 100%;
+        min-width: 0;
+        padding: var(--space-xl);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-panel);
+        background: var(--surface);
+      }
+
+      h1 {
+        max-width: 720px;
+        margin: 0 0 var(--space-lg);
+        font-size: 44px;
+        line-height: 1.05;
+        font-weight: 750;
+        overflow-wrap: break-word;
+      }
+
+      p {
+        max-width: 620px;
+        margin: 0 0 var(--space-xl);
+        color: var(--muted);
+        overflow-wrap: break-word;
+      }
+
+      button {
+        min-height: 44px;
+        padding: 0 var(--space-lg);
+        border: 0;
+        border-radius: var(--radius-control);
+        color: var(--text);
+        background: var(--accent);
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:focus-visible {
+        outline: 2px solid var(--text);
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 560px) {
+        main {
+          padding: var(--space-xl) var(--space-lg);
+        }
+
+        .card {
+          padding: var(--space-lg);
+        }
+
+        h1 {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>Generic UI before DESIGN.md</h1>
+        <p>This intentionally starts with a blue gradient, oversized rounded card, heavy shadow, and unrelated primary color. The design-system skill should move it toward the local DESIGN.md rules.</p>
+        <button type="button">Primary action</button>
+      </section>
+    </main>
+  </body>
+</html>
