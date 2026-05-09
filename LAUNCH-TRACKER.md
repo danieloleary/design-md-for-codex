@@ -9,7 +9,7 @@ Use this during launch to track channels, replies, follow-ups, and feedback wort
 - Launch state: `ready`
 - GitHub Actions: `green`
 - GitHub Pages: `live`
-- Current release: `v0.1.3 - Papyrus to workbench proof`
+- Current release: `v0.1.4 - Launch operating kit`
 - Primary install path:
 
   ```text
@@ -35,7 +35,7 @@ Approve the channels you want to send now, or hold until tomorrow.
 | OpenAI Forum | Dan | repo link | ready for approval |  | post after approval |  |
 | OpenAI Developers Discord | Dan | repo link | ready for approval |  | post after approval |  |
 | Friend email | Dan | repo link | ready for approval |  | email after approval |  |
-| GitHub release | Dan | release notes | live |  |  |  |
+| GitHub release | Dan | release notes | live | `v0.1.4` | confirm release URL |  |
 | Skill directories | Dan | repo link | queued |  | submit after approval |  |
 
 ## Rollout Timeline
