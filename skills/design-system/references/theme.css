@@ -1,0 +1,93 @@
+@theme {
+  --color-ink: #121417;
+  --color-near-black: #141413;
+  --color-void: #0F1012;
+  --color-graphite: #2D333B;
+  --color-charcoal-warm: #3D3D3A;
+  --color-slate: #5D6978;
+  --color-stone: #87867F;
+  --color-mist: #E7EBEF;
+  --color-parchment: #F5F4ED;
+  --color-ivory: #FAF9F5;
+  --color-paper: #F8F7F3;
+  --color-porcelain: #FFFFFF;
+  --color-terracotta: #C96442;
+  --color-terracotta-dark: #9F442B;
+  --color-focus-blue: #3898EC;
+  --color-mint: #25A784;
+  --color-amber: #B7791F;
+  --color-coral: #D84E3F;
+  --color-violet: #6E56CF;
+  --color-dark-surface: #1F2228;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", SFMono-Regular, Consolas, monospace;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-xxl: 32px;
+}
+
+:root {
+  --cw-bg: var(--color-parchment);
+  --cw-surface: var(--color-ivory);
+  --cw-surface-raised: var(--color-porcelain);
+  --cw-text-primary: var(--color-near-black);
+  --cw-text-secondary: var(--color-charcoal-warm);
+  --cw-text-muted: var(--color-stone);
+  --cw-border: var(--color-mist);
+  --cw-accent: var(--color-terracotta);
+  --cw-accent-pressed: var(--color-terracotta-dark);
+  --cw-focus: var(--color-focus-blue);
+}
+
+.dark,
+[data-theme="dark"] {
+  --cw-bg: var(--color-void);
+  --cw-surface: var(--color-dark-surface);
+  --cw-surface-raised: rgba(255, 255, 255, 0.03);
+  --cw-text-primary: rgba(255, 255, 255, 1);
+  --cw-text-secondary: rgba(255, 255, 255, 0.70);
+  --cw-text-muted: rgba(255, 255, 255, 0.50);
+  --cw-border: rgba(255, 255, 255, 0.10);
+  --cw-border-strong: rgba(255, 255, 255, 0.20);
+  --cw-accent: var(--color-terracotta);
+  --cw-accent-pressed: var(--color-terracotta-dark);
+  --cw-focus: var(--color-focus-blue);
+}
+
+.cw-app {
+  background: var(--cw-bg);
+  color: var(--cw-text-primary);
+  font-family: var(--font-sans);
+}
+
+.cw-surface {
+  background: var(--cw-surface);
+  border: 1px solid var(--cw-border);
+  border-radius: var(--radius-md);
+}
+
+.cw-button-primary {
+  background: var(--cw-accent);
+  color: var(--color-porcelain);
+  border-radius: var(--radius-sm);
+  font-weight: 650;
+}
+
+.cw-button-primary:active {
+  background: var(--cw-accent-pressed);
+}
+
+.cw-code {
+  background: var(--color-void);
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+}

@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+node_modules/
+dist/
+build/
+.cache/
+.vite/
+coverage/
+*.log
+*.tmp
+.env
+.env.*
+!.env.example
+.codex/
+generated_images/

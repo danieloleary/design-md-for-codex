@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design System"
+  short_description: "Apply DESIGN.md to frontend UI work."
+  brand_color: "#C96442"
+  default_prompt: "Use the design-system skill. Read DESIGN.md first, then build or review the UI using its design rules."
+policy:
+  allow_implicit_invocation: true
