@@ -59,7 +59,8 @@ It checks:
 5. Confirm Codex read or applied `DESIGN.md` by checking the response, diff, or rendered UI:
    - dark command surface
    - terracotta primary action
-   - no blue gradient
+   - no Papyrus/fantasy type or loud gradient
+   - governed generated imagery
    - compact controls
    - no radius above 8px
 
@@ -67,11 +68,13 @@ It checks:
 
 The repo includes one captured proof run:
 
-- `fixture/index.html`: intentionally loud generic starting point.
-- `fixture/after.html`: output from a Codex run using `$design-system`.
+- `fixture/index.html`: intentionally loud Papyrus-style generic starting point.
+- `fixture/after.html`: output from a Codex run using `$design-system`, now with generated workbench imagery.
 - `fixture/codex-result.md`: final Codex response.
 - `../assets/proof/fixture-before.png`: before screenshot.
 - `../assets/proof/fixture-after.png`: after screenshot.
+- `../assets/proof/ai-workbench-wide.png`: generated workbench image used in the after proof.
+- `../assets/proof/ai-workbench-detail.png`: generated detail image used in the after proof.
 
 ## Launch Images
 

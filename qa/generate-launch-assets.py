@@ -190,7 +190,7 @@ def save_before_after() -> None:
     draw.rectangle((0, 0, 1600, 900), fill=NIGHT)
     draw.rectangle((0, 0, 1600, 10), fill=TERRACOTTA)
     draw.text((72, 56), "One prompt. One DESIGN.md. Less slop.", font=font(FONT["bold"], 58), fill=IVORY)
-    draw.text((76, 130), "Before: generic soup. After: governed workbench.", font=font(FONT["regular"], 27), fill="#ded3c3")
+    draw.text((76, 130), "Before: Papyrus soup. After: governed workbench.", font=font(FONT["regular"], 27), fill="#ded3c3")
 
     before = Image.open(PROOF / "fixture-before.png").convert("RGB")
     after = Image.open(PROOF / "fixture-after.png").convert("RGB")

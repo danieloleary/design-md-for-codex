@@ -10,7 +10,7 @@ Sharp. Direct. Useful. Builder-first. Inspired by X/Grok cadence and Claude warm
 
 - Make Codex remember your taste.
 - `DESIGN.md` is the memory. This skill is the habit.
-- Before: generic soup. After: governed workbench.
+- Before: Papyrus soup. After: governed workbench.
 - Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
 ## Landing Page
@@ -57,13 +57,13 @@ Why:
 Proof:
 
 - The habit
-- Before: generic soup. After: governed workbench.
+- Before: Papyrus soup. After: governed workbench.
 - Without it
 - Codex can ship loud default UI: gradients, blobs, pill buttons, huge radii, and a new visual system every screen.
 - With it
 - Codex reads `DESIGN.md`, applies the tokens, turns noise into a workbench, and checks desktop and mobile.
-- Before: generic soup
-- After: DESIGN.md workbench
+- Before: Papyrus soup
+- After: AI-image workbench
 
 Credit:
 

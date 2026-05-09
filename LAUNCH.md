@@ -21,7 +21,7 @@ I made a tiny Codex skill for people tired of re-prompting taste.
 
 Install one skill. Add `DESIGN.md`. Now Codex starts UI work from your design rules.
 
-Before: generic soup.
+Before: Papyrus soup.
 After: governed workbench.
 
 ```text

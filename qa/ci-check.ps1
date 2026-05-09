@@ -71,6 +71,8 @@ try {
     "assets/share-before-after.png",
     "assets/proof/fixture-before.png",
     "assets/proof/fixture-after.png",
+    "assets/proof/ai-workbench-wide.png",
+    "assets/proof/ai-workbench-detail.png",
     "LAUNCH.md",
     "SHARE.md",
     "skills/design-system/SKILL.md",

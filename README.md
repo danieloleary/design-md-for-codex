@@ -63,16 +63,16 @@ Replace it with your taste.
 
 ## Prove It
 
-Before: generic soup. After: governed workbench.
+Before: Papyrus soup. After: governed workbench.
 
-![Before: loud generic SaaS UI](assets/proof/fixture-before.png)
+![Before: loud Papyrus-style generic UI](assets/proof/fixture-before.png)
 
-![After: Codex read DESIGN.md and turned it into a dark workbench](assets/proof/fixture-after.png)
+![After: Codex read DESIGN.md and turned it into a dark AI-image-backed workbench](assets/proof/fixture-after.png)
 
 Artifacts:
 
-- `qa/fixture/index.html`: reusable bad starting point with generic soup.
-- `qa/fixture/after.html`: output from the Codex proof run.
+- `qa/fixture/index.html`: reusable bad starting point with Papyrus, generic soup, and drift.
+- `qa/fixture/after.html`: output from the Codex proof run with generated workbench imagery.
 - `qa/fixture/codex-result.md`: final Codex response from the run.
 
 Run the local smoke test:

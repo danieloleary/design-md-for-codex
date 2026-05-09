@@ -44,6 +44,8 @@ try {
   Require-File (Join-Path $RepoRoot "qa\fixture\codex-result.md")
   Require-File (Join-Path $RepoRoot "assets\proof\fixture-before.png")
   Require-File (Join-Path $RepoRoot "assets\proof\fixture-after.png")
+  Require-File (Join-Path $RepoRoot "assets\proof\ai-workbench-wide.png")
+  Require-File (Join-Path $RepoRoot "assets\proof\ai-workbench-detail.png")
   Require-File (Join-Path $RepoRoot "assets\social-card.png")
   Require-File (Join-Path $RepoRoot "assets\repo-banner.png")
   Require-File (Join-Path $RepoRoot "assets\share-before-after.png")

@@ -50,6 +50,13 @@
         align-items: stretch;
       }
 
+      .showcase {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(220px, 0.7fr);
+        gap: var(--space-lg);
+        margin-top: var(--space-xl);
+      }
+
       .card,
       .panel,
       .metric,
@@ -61,6 +68,28 @@
 
       .card {
         padding: 32px;
+      }
+
+      .art-card {
+        overflow: hidden;
+        min-height: 240px;
+      }
+
+      .art-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 240px;
+        object-fit: cover;
+      }
+
+      .art-copy {
+        display: grid;
+        gap: var(--space-lg);
+      }
+
+      .art-copy .note {
+        min-height: auto;
       }
 
       .eyebrow {
@@ -202,6 +231,7 @@
         }
 
         .hero,
+        .showcase,
         .metrics,
         .notes {
           grid-template-columns: 1fr;
@@ -246,6 +276,21 @@
             <span class="tag">Ready</span>
           </div>
         </aside>
+      </section>
+
+      <section class="showcase" aria-label="AI generated design proof">
+        <figure class="art-card">
+          <img src="../../assets/proof/ai-workbench-wide.png" alt="AI generated dark workbench with warm paper design-system artifacts">
+        </figure>
+        <div class="art-copy">
+          <article class="note">
+            <strong>Generated imagery</strong>
+            <p>The page can carry rich visuals without abandoning the system: dark surface, warm paper, terracotta accent, exact spacing.</p>
+          </article>
+          <figure class="art-card">
+            <img src="../../assets/proof/ai-workbench-detail.png" alt="AI generated close-up of governed interface and parchment design tokens">
+          </figure>
+        </div>
       </section>
 
       <section class="metrics" aria-label="Design system metrics">
