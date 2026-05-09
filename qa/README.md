@@ -2,6 +2,16 @@
 
 This folder proves the showcase is advertising a real Codex skill, not just a pretty idea.
 
+## Daily CI Check
+
+GitHub Actions runs this every day and on each push:
+
+```powershell
+.\qa\ci-check.ps1
+```
+
+It is cloud-friendly and does not assume the runner has the Codex desktop app's local system-skill folders. It checks public URLs, required files, DESIGN.md linting, token parsing, install prompt text, and encoding artifacts.
+
 ## Smoke Test
 
 Run from the repo root:

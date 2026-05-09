@@ -73,6 +73,16 @@ This repo also includes a smoke test:
 
 Smoke test prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and the local Codex system skills that ship with recent Codex builds.
 
+## Staying Current
+
+Codex and skill conventions can move fast, so this repo includes a daily GitHub Actions drift check:
+
+```powershell
+.\qa\ci-check.ps1
+```
+
+It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, and common encoding problems. See `MAINTAINING.md` for the update loop.
+
 ## Repo-Local Install
 
 Copy the skill into your project:
