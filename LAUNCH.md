@@ -10,6 +10,28 @@ Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 - Attach `assets/share-before-after.png` when the post is about proof.
 - Link to the repo and the live showcase.
 - Pin the install prompt near the top of every long post.
+- Ask Teddy to run the launch desk checklist in `TEDDY-LAUNCH.md`.
+
+## Teddy Launch Desk
+
+Teddy can turn this from "Dan remembers to post stuff" into an actual launch system.
+
+Use Teddy for:
+
+- Drafting X, LinkedIn, email, Discord, OpenAI Forum, and friend DM variants.
+- Preparing a 3-day launch sequence with reminders.
+- Tracking replies, stars, forks, issues, and people who ask for help.
+- Sending approved email or X posts from Teddy-controlled channels.
+- Nudging Dan to do the LinkedIn post personally.
+- Creating follow-up tasks: demo video, GitHub social preview, OpenAI Forum thread, directory submissions.
+
+Do not let Teddy send public posts, emails, or DMs without Dan approval unless Dan explicitly changes that rule.
+
+Launch command for Teddy:
+
+```text
+Run the design-md-for-codex launch desk from TEDDY-LAUNCH.md. Prepare drafts, reminders, and a response tracker. Ask Dan before sending public posts, emails, or DMs.
+```
 
 ## One-Liner
 
@@ -89,6 +111,29 @@ Then restart Codex and try:
 ```text
 $design-system Make this page follow DESIGN.md.
 ```
+
+## Email To Builder Friends
+
+Subject: Tiny Codex skill for keeping UI taste from drifting
+
+Hey,
+
+I made a small Codex skill that makes the agent read `DESIGN.md` before touching UI.
+
+The idea is simple: put design taste in the repo, then make Codex build from that source of truth instead of re-prompting the same preferences every session.
+
+Repo:
+https://github.com/danieloleary/design-md-for-codex
+
+Install:
+
+```text
+Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+```
+
+If you try it, I would love the sharpest feedback you have.
+
+Dan
 
 ## Release Notes
 

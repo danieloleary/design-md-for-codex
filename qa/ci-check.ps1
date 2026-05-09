@@ -75,6 +75,7 @@ try {
     "assets/proof/ai-workbench-detail.png",
     "LAUNCH.md",
     "SHARE.md",
+    "TEDDY-LAUNCH.md",
     "skills/design-system/SKILL.md",
     "skills/design-system/agents/openai.yaml",
     "skills/design-system/references/DESIGN.md",
@@ -150,6 +151,7 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "landing.css")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "SHARE.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "TEDDY-LAUNCH.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"

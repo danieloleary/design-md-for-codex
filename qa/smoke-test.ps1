@@ -51,6 +51,7 @@ try {
   Require-File (Join-Path $RepoRoot "assets\share-before-after.png")
   Require-File (Join-Path $RepoRoot "LAUNCH.md")
   Require-File (Join-Path $RepoRoot "SHARE.md")
+  Require-File (Join-Path $RepoRoot "TEDDY-LAUNCH.md")
 
   Step "Installing public GitHub skill into temp folder"
   if (-not (Test-Path -LiteralPath $Installer -PathType Leaf)) {
