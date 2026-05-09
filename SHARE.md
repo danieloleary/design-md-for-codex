@@ -19,21 +19,6 @@ Use $skill-installer to install https://github.com/danieloleary/design-md-for-co
 - GitHub: pin the repo, add topics, keep the README proof-forward.
 - Friends/builders: send the short DM from `LAUNCH.md`.
 
-## Teddy-Assisted Sharing
-
-Use `TEDDY-LAUNCH.md` as the launch operator plan.
-
-Best Teddy jobs:
-
-- Draft X posts from Teddy's account.
-- Prepare Dan's LinkedIn post for Dan to publish personally.
-- Draft friend emails and ask Dan before sending.
-- Track replies, stars, forks, bugs, and useful feedback.
-- Remind Dan to follow up with high-signal builders.
-- Convert repeated questions into GitHub issues or docs updates.
-
-Approval rule: Teddy should ask Dan before sending public posts, emails, DMs, or replies that represent Dan publicly.
-
 ## Skill And Agent Directories
 
 - `openai/skills`: future catalog path for Codex skills.

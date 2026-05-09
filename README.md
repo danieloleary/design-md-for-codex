@@ -95,9 +95,7 @@ It verifies the public install path, GitHub Pages links, DESIGN.md linting with 
 
 ## Share It
 
-Launch assets and ready-to-post copy live in `LAUNCH.md`. Distribution targets and follow-up catalog paths live in `SHARE.md`. Teddy-assisted launch operations live in `TEDDY-LAUNCH.md`, with a tracker in `LAUNCH-TRACKER.md`.
-
-Teddy can do more than draft: after Dan approves the exact channel, copy, audience, and asset, Teddy can send emails, post from Teddy-controlled socials, submit to approved directories, track replies, and turn feedback into follow-up work.
+Launch assets and ready-to-post copy live in `LAUNCH.md`. Distribution targets and follow-up catalog paths live in `SHARE.md`. A simple launch tracker lives in `LAUNCH-TRACKER.md`.
 
 The primary install path is this GitHub skill folder. Plugin packaging and an `openai/skills` catalog contribution are future distribution steps.
 

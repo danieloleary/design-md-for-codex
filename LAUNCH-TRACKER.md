@@ -2,9 +2,7 @@
 
 Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
-Use this with `TEDDY-LAUNCH.md`.
-
-Teddy should keep this updated during launch, then turn repeated feedback into GitHub issues or docs updates.
+Use this during launch to track channels, replies, follow-ups, and feedback worth turning into GitHub issues or docs updates.
 
 ## Status
 
@@ -25,20 +23,24 @@ Day 0 prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discor
 
 GitHub Actions are green. Pages is live. The install path works.
 
-Do you approve Teddy sending the Teddy-controlled posts/emails now? If yes, Teddy will send them, update this tracker, and monitor replies.
+Launch prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discord draft, and reply tracker.
+
+GitHub Actions are green. Pages is live. The install path works.
+
+Approve the channels you want to send now, or hold until tomorrow.
 ```
 
 ## Channel Tracker
 
 | Channel | Owner | Asset | Status | Reply | Action | Follow-Up |
 | --- | --- | --- | --- | --- | --- | --- |
-| X | Teddy | `assets/share-before-after.png` | ready for approval |  | post after approval |  |
+| X | Dan / launch operator | `assets/share-before-after.png` | ready for approval |  | post after approval |  |
 | LinkedIn | Dan | `assets/share-before-after.png` | handoff |  |  |  |
-| OpenAI Forum | Teddy sends after approval | repo link | ready for approval |  | post after approval |  |
-| OpenAI Developers Discord | Teddy sends after approval | repo link | ready for approval |  | post after approval |  |
-| Friend email | Teddy sends after approval | repo link | ready for approval |  | email after approval |  |
-| GitHub release | Dan/Teddy | release notes | live |  |  |  |
-| Skill directories | Teddy submits after approval | repo link | queued |  | submit after approval |  |
+| OpenAI Forum | Dan / launch operator | repo link | ready for approval |  | post after approval |  |
+| OpenAI Developers Discord | Dan / launch operator | repo link | ready for approval |  | post after approval |  |
+| Friend email | Dan / launch operator | repo link | ready for approval |  | email after approval |  |
+| GitHub release | Dan | release notes | live |  |  |  |
+| Skill directories | Dan / launch operator | repo link | queued |  | submit after approval |  |
 
 ## Reply Queue
 
@@ -73,10 +75,10 @@ Do you approve Teddy sending the Teddy-controlled posts/emails now? If yes, Tedd
 
 ## Next Actions
 
-- Ask Dan to approve or hold each Teddy-controlled channel.
+- Approve or hold each launch channel.
 - Send approved posts/emails.
 - Record who received the launch.
 - Capture the first 10 pieces of feedback.
 - Turn bugs into GitHub issues.
 - Turn repeated questions into README or FAQ updates.
-- Ask Dan which replies need his voice.
+- Mark which replies need Dan's personal voice.

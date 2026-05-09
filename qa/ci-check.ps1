@@ -76,7 +76,6 @@ try {
     "LAUNCH.md",
     "LAUNCH-TRACKER.md",
     "SHARE.md",
-    "TEDDY-LAUNCH.md",
     "skills/design-system/SKILL.md",
     "skills/design-system/agents/openai.yaml",
     "skills/design-system/references/DESIGN.md",
@@ -153,7 +152,6 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH-TRACKER.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "SHARE.md")
-  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "TEDDY-LAUNCH.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"
@@ -179,8 +177,8 @@ try {
   Assert-Url "$PagesRoot/assets/proof/ai-workbench-wide.png"
   Assert-Url "$PagesRoot/assets/proof/ai-workbench-detail.png"
   Assert-Url "$PagesRoot/LAUNCH.md" "Launch Plan"
+  Assert-Url "$PagesRoot/LAUNCH-TRACKER.md" "Launch Tracker"
   Assert-Url "$PagesRoot/SHARE.md" "Where To Share"
-  Assert-Url "$PagesRoot/TEDDY-LAUNCH.md" "Teddy Launch Desk"
   Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
   Assert-Url "$PagesRoot/qa/smoke-test.ps1" "Smoke test passed"
   Assert-Url "$GitHubRoot/blob/$MainBranch/skills/design-system/SKILL.md" "design-system"
