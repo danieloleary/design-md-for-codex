@@ -37,7 +37,7 @@ The `design-system` skill tells Codex to:
 - Teams and solo builders who want Codex UI work to stay consistent across screens.
 - Designers and design engineers who want agents to respect product rules.
 - People building apps with Codex who are tired of re-explaining the same UI taste.
-- Anyone making small, useful skills that friends and the community can reuse.
+- Anyone packaging a reusable Codex workflow for a team, client, or open-source project.
 
 ## What is included
 
@@ -57,9 +57,9 @@ Replace it with your own taste.
 
 ## Install
 
-### Repo-local
+### Minimal repo-local
 
-Copy this into your project:
+Copy the skill into your project:
 
 ```text
 .agents/
@@ -67,13 +67,21 @@ Copy this into your project:
     design-system/
       SKILL.md
       agents/openai.yaml
+      references/
+        DESIGN.md
+        theme.css
+        tokens.json
 ```
 
 Then put `DESIGN.md` at the root of your repo.
 
+### Full starter kit
+
+Use `skills/design-system/references/` if you want example design rules, CSS tokens, and JSON tokens to adapt.
+
 ### From GitHub
 
-After publishing this repo, install it with:
+Install the published skill from GitHub with:
 
 ```text
 $skill-installer install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
@@ -109,4 +117,4 @@ I made this because I kept wanting Codex to build like it had been paying attent
 
 Not perfect. Not magic. Just a small habit that keeps product taste from disappearing between prompts.
 
-If it helps you, fork it, tune the `DESIGN.md`, and make something sharper for your own friends.
+If it helps you, fork it, tune the `DESIGN.md`, and make something sharper for your own team or project.

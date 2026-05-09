@@ -1,8 +1,10 @@
 # Examples
 
-This folder shows the simplest way to give a friend the skill.
+This folder shows the smallest repo-local install.
 
 Copy `examples/minimal-repo/.agents/skills/design-system` into their project, then copy or customize `examples/minimal-repo/DESIGN.md` at the project root.
+
+For a fuller starter kit, adapt the files in `skills/design-system/references/` from the root of this repo.
 
 The resulting project shape is:
 

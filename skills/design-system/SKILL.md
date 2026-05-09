@@ -1,6 +1,6 @@
 ---
 name: design-system
-description: Use when building, editing, reviewing, or refactoring frontend UI; creating visual components; translating screenshots, mockups, DESIGN.md files, or product taste references into code; or checking whether UI follows the repository design system. Read DESIGN.md first and apply its colors, typography, spacing, components, accessibility rules, taste profile, and do/don'ts.
+description: Use for frontend UI work when a repo has DESIGN.md or design-system guidance. Read the design source first, then apply its colors, typography, spacing, components, accessibility rules, taste profile, and do/don'ts.
 metadata:
   short-description: Apply DESIGN.md to frontend UI work
 ---
@@ -9,7 +9,7 @@ metadata:
 
 Use this skill to keep UI work aligned with a repository's visual system.
 
-The bundled `references/DESIGN.md` is an example starter system. It uses a warm, restrained direction inspired by Claude-like editorial warmth, X/xAI-like restraint, and Linear-like precision. Treat that as an example default, not a requirement.
+The bundled `references/DESIGN.md` is a starter system with a warm, restrained product direction. Treat it as a fallback example, not a house style.
 
 ## Workflow
 

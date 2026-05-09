@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: Codex Workshop
-description: A warm, restrained design system for focused developer tools, research workspaces, and agent-assisted building, combining Claude-like editorial warmth, X/xAI-like restraint, and Linear-like precision.
+description: A warm, restrained design system for focused developer tools, research workspaces, and agent-assisted building, combining editorial warmth, monochrome restraint, and precise workbench layout.
 colors:
   ink: "#121417"
   near-black: "#141413"
@@ -172,7 +172,7 @@ Codex Workshop is a design system for serious work that still feels alive. It sh
 
 Use this system for developer tools, dashboards, documentation surfaces, research workspaces, local utilities, and agent-assisted workflows. Interfaces should feel built for repeated use, fast scanning, and clear action.
 
-Default aesthetic: Claude.com warmth plus X/xAI restraint plus Linear precision. Light mode should feel editorial and humane; dark mode should feel sparse, monochrome, and exact. The result should be original, not a clone of any referenced brand.
+Default aesthetic: editorial warmth plus monochrome restraint plus precise workbench layout. Light mode should feel humane and readable; dark mode should feel sparse, monochrome, and exact. The result should be original, not a clone of any referenced brand.
 
 ## Design Principles
 
@@ -329,5 +329,5 @@ Don't:
 When asking an AI coding agent to build UI with this file, use language like:
 
 ```text
-Use DESIGN.md as the source of truth. Build the actual working interface first. Aim for Claude-like warmth in light mode, X/xAI-like restraint in dark mode, and Linear-like precision in layout. Use terracotta as the main accent, avoid generic SaaS blue, use borders before shadows, and verify the result at desktop and mobile widths.
+Use DESIGN.md as the source of truth. Build the actual working interface first. Aim for editorial warmth in light mode, monochrome restraint in dark mode, and precise workbench layout. Use terracotta as the main accent, avoid generic SaaS blue, use borders before shadows, and verify the result at desktop and mobile widths.
 ```

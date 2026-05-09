@@ -2,13 +2,14 @@
   --near-black: #141413;
   --void: #0f1012;
   --charcoal: #3d3d3a;
-  --stone: #817f77;
-  --mist: #e3ded2;
-  --parchment: #f5f1e7;
-  --ivory: #fbf8f1;
-  --porcelain: #fffdf8;
+  --stone: #87867f;
+  --mist: #e7ebef;
+  --parchment: #f5f4ed;
+  --ivory: #faf9f5;
+  --porcelain: #ffffff;
   --terracotta: #c96442;
   --terracotta-dark: #9f442b;
+  --terracotta-hover: #82331f;
   --max: 1180px;
   --gutter: clamp(20px, 4vw, 48px);
   color: var(--near-black);
@@ -27,14 +28,18 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(255, 253, 248, 0) 340px),
-    var(--parchment);
+  background: var(--parchment);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #3898ec;
+  outline-offset: 3px;
 }
 
 .site-header {
@@ -76,7 +81,7 @@ nav {
   font-size: 14px;
 }
 
-nav a:last-child {
+.nav-install {
   padding: 9px 14px;
   border-radius: 6px;
   color: var(--porcelain);
@@ -84,7 +89,7 @@ nav a:last-child {
 }
 
 main {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1,
@@ -97,9 +102,9 @@ p {
 h1,
 h2,
 blockquote {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  letter-spacing: -0.032em;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 720;
+  letter-spacing: 0;
 }
 
 .hero {
@@ -108,15 +113,14 @@ blockquote {
   gap: clamp(34px, 5vw, 76px);
   align-items: center;
   max-width: var(--max);
-  min-height: calc(100vh - 64px);
   margin: 0 auto;
-  padding: clamp(64px, 7vw, 108px) var(--gutter) clamp(48px, 7vw, 92px);
+  padding: clamp(46px, 6vw, 82px) var(--gutter) clamp(42px, 6vw, 74px);
 }
 
 h1 {
   max-width: 620px;
-  font-size: clamp(54px, 6.9vw, 92px);
-  line-height: 0.92;
+  font-size: clamp(50px, 6.4vw, 84px);
+  line-height: 1.02;
 }
 
 .hero-lede {
@@ -155,11 +159,11 @@ h1 {
 
 .button.primary {
   color: var(--porcelain);
-  background: var(--terracotta);
+  background: var(--terracotta-dark);
 }
 
 .button.primary:hover {
-  background: var(--terracotta-dark);
+  background: var(--terracotta-hover);
 }
 
 .button.secondary {
@@ -171,9 +175,9 @@ h1 {
 .hero-visual {
   overflow: hidden;
   border: 1px solid rgba(20, 20, 19, 0.13);
-  border-radius: 16px;
+  border-radius: 8px;
   background: var(--porcelain);
-  box-shadow: 0 24px 70px rgba(20, 20, 19, 0.14);
+  box-shadow: 0 10px 30px rgba(18, 20, 23, 0.10);
 }
 
 .hero-visual img {
@@ -211,8 +215,8 @@ h1 {
 
 .compare h2 {
   max-width: 760px;
-  font-size: clamp(46px, 6.6vw, 92px);
-  line-height: 0.94;
+  font-size: clamp(42px, 5.8vw, 78px);
+  line-height: 1.04;
 }
 
 .compare-copy p {
@@ -225,7 +229,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: 14px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -260,8 +264,8 @@ h1 {
 
 .section-heading h2 {
   max-width: 760px;
-  font-size: clamp(40px, 5.5vw, 76px);
-  line-height: 0.98;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 1.05;
 }
 
 .section-heading p {
@@ -315,7 +319,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border: 1px solid rgba(20, 20, 19, 0.13);
-  border-radius: 14px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -324,7 +328,8 @@ h1 {
   padding: 20px;
   border-right: 1px solid rgba(20, 20, 19, 0.1);
   border-bottom: 1px solid rgba(20, 20, 19, 0.1);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 720;
   font-size: clamp(26px, 3.5vw, 42px);
   line-height: 1;
 }
@@ -351,7 +356,7 @@ h1 {
 
 .install-grid article {
   border: 1px solid rgba(20, 20, 19, 0.13);
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--ivory);
   overflow: hidden;
 }
@@ -365,6 +370,20 @@ h1 {
 code,
 pre {
   font-family: "JetBrains Mono", Consolas, monospace;
+}
+
+p code,
+li code {
+  padding: 0.08em 0.28em;
+  border: 1px solid rgba(20, 20, 19, 0.12);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.52);
+  font-size: 0.9em;
+}
+
+.compare code {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 pre {
@@ -381,7 +400,7 @@ pre {
 .file-panel {
   display: grid;
   border: 1px solid rgba(20, 20, 19, 0.13);
-  border-radius: 12px;
+  border-radius: 8px;
   background: var(--ivory);
   overflow: hidden;
 }
@@ -423,8 +442,8 @@ pre {
 blockquote {
   margin: 0;
   max-width: 820px;
-  font-size: clamp(40px, 5.8vw, 78px);
-  line-height: 0.98;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 1.05;
 }
 
 .dan-note > p:last-child {
@@ -437,11 +456,15 @@ blockquote {
 
 @media (max-width: 980px) {
   nav {
+    display: flex;
+  }
+
+  nav a:not(.nav-install) {
     display: none;
   }
 
   .site-header {
-    position: static;
+    position: sticky;
   }
 
   .hero,
@@ -502,8 +525,15 @@ blockquote {
   }
 
   h1 {
-    font-size: clamp(48px, 14vw, 64px);
-    letter-spacing: -0.025em;
+    font-size: clamp(44px, 13vw, 60px);
+    letter-spacing: 0;
+  }
+
+  .compare h2,
+  .section-heading h2,
+  blockquote {
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 1.08;
   }
 
   .hero-actions,
