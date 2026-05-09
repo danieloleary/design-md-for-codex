@@ -1,8 +1,6 @@
 ---
 name: design-system
 description: Use when building, editing, reviewing, or refactoring frontend UI. Read the repository DESIGN.md first and apply its colors, typography, spacing, components, accessibility rules, and do/don'ts.
-metadata:
-  short-description: Apply the repo DESIGN.md to UI work
 ---
 
 # Design System
