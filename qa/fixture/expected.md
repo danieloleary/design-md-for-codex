@@ -1,4 +1,4 @@
-# Expected Manual QA Result
+# Expected Result
 
 After running:
 

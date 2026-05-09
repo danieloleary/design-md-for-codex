@@ -1,27 +1,27 @@
 # Contributing
 
-Thanks for helping make this more useful.
+Make it sharper. Keep it small.
 
-This repo is meant to stay small, warm, and practical. A good contribution should make the skill easier to install, easier to understand, or more reliable when Codex is building UI from `DESIGN.md`.
+A good contribution makes the skill easier to install, easier to trust, or harder for Codex to ignore when it builds UI from `DESIGN.md`.
 
 ## Good contributions
 
 - Clearer skill instructions.
 - Better examples for repo-local installs.
 - Stronger `DESIGN.md` starter patterns.
-- Compatibility notes for Codex, ChatGPT skills, and other Agent Skills tools.
+- Compatibility notes for Codex and other Agent Skills tools.
 - Small fixes to docs, links, wording, or accessibility.
 
 ## Style
 
 - Keep the skill concise.
 - Prefer concrete instructions over broad theory.
-- Avoid locking the skill to one person's taste.
-- Preserve the example taste direction as a friendly default, not a requirement.
+- Do not lock the skill to one person's taste.
+- Keep the example taste direction as a default, not a dependency.
 
 ## Pull requests
 
-Please include:
+Include:
 
 - What changed.
 - Why it helps.

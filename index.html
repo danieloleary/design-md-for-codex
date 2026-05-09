@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A Codex skill that makes agents read DESIGN.md before frontend UI work.">
-    <meta property="og:title" content="Make Codex remember your taste">
-    <meta property="og:description" content="Install one tiny skill, add DESIGN.md, and Codex starts UI work from your design rules.">
+    <meta name="description" content="A Codex skill that makes the agent read DESIGN.md before it touches UI.">
+    <meta property="og:title" content="Give Codex taste. Make it use it.">
+    <meta property="og:description" content="Install one skill. Add DESIGN.md. Make every UI pass start from your rules.">
     <meta property="og:image" content="https://danieloleary.github.io/design-md-for-codex/assets/hero-art.png">
     <meta property="og:url" content="https://danieloleary.github.io/design-md-for-codex/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://danieloleary.github.io/design-md-for-codex/assets/hero-art.png">
-    <title>Make Codex remember your taste</title>
+    <title>Give Codex taste. Make it use it.</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="landing.css">
   </head>
@@ -31,23 +31,23 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Codex skill + DESIGN.md starter</p>
-          <h1>Make Codex remember your taste.</h1>
-          <p class="lede">Install one tiny skill, add <code>DESIGN.md</code>, and Codex starts UI work from your design rules.</p>
+          <p class="eyebrow">Codex skill + DESIGN.md</p>
+          <h1>Give Codex taste. Make it use it.</h1>
+          <p class="lede">Install one skill. Add <code>DESIGN.md</code>. Make every UI pass start from your rules.</p>
           <div class="actions">
             <button class="button primary" type="button" data-copy-install>Copy install prompt</button>
             <a class="button secondary" href="codex://">Open Codex after copying</a>
           </div>
-          <p class="copy-status" data-copy-status aria-live="polite">Copy the prompt, paste it into Codex, then restart Codex.</p>
+          <p class="copy-status" data-copy-status aria-live="polite">Copy it. Paste it into Codex. Restart once.</p>
         </div>
 
         <aside class="start-card" id="start" aria-label="Quick start">
-          <h2>Start here</h2>
-          <p>Paste this into Codex. Codex will use the built-in skill installer to add the skill.</p>
+          <h2>Install it</h2>
+          <p>Paste this into Codex. The built-in installer pulls the skill from GitHub.</p>
           <pre><code id="installPrompt">Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system</code></pre>
           <ol>
-            <li>Restart Codex to pick up the new skill.</li>
-            <li>Add or tune <code>DESIGN.md</code> in your repo.</li>
+            <li>Restart Codex.</li>
+            <li>Add or tune <code>DESIGN.md</code>.</li>
             <li>Run <code>$design-system Make this page follow DESIGN.md.</code></li>
           </ol>
         </aside>
@@ -59,62 +59,62 @@
 
       <section class="why" id="why">
         <div>
-          <p class="eyebrow">Why DESIGN.md rocks</p>
-          <h2>Taste stops living in chat.</h2>
-          <p>Put the product rules where Codex can find them every time.</p>
+          <p class="eyebrow">Why DESIGN.md works</p>
+          <h2>Your taste belongs in the repo.</h2>
+          <p>Prompts disappear. Rules remain. Codex knows where to look.</p>
         </div>
         <div class="reason-grid">
           <article>
-            <h3>Taste lives in the repo</h3>
-            <p>Colors, type, spacing, components, accessibility, voice, and no-go zones travel with the code.</p>
+            <h3>Rules travel with the code</h3>
+            <p>Colors, type, spacing, components, accessibility, voice, and no-go zones stay in one file.</p>
           </article>
           <article>
-            <h3>Prompts get shorter</h3>
-            <p>Stop retyping the same visual preferences every time you ask for a screen.</p>
+            <h3>Prompts get smaller</h3>
+            <p>Stop retyping the same visual preferences every time Codex touches a screen.</p>
           </article>
           <article>
-            <h3>Reviews get less repetitive</h3>
-            <p>Codex has a source of truth for the feedback you keep giving.</p>
+            <h3>Reviews get sharper</h3>
+            <p>Give feedback once. Put it in the file. Let future work inherit it.</p>
           </article>
           <article>
             <h3>UI stops drifting</h3>
-            <p>New pages start from the same tokens and rules instead of a fresh vibe roll.</p>
+            <p>New pages start from the same source instead of a fresh visual guess.</p>
           </article>
         </div>
       </section>
 
       <section class="proof" id="proof">
         <div class="proof-copy">
-          <p class="eyebrow">See the habit</p>
-          <h2>Before: decent UI. After: UI with memory.</h2>
+          <p class="eyebrow">The habit</p>
+          <h2>Before: plausible UI. After: UI with a source.</h2>
         </div>
         <div class="proof-grid">
           <article>
-            <h3>Without this skill</h3>
-            <p>Codex can build something usable, but it may invent new spacing, accent colors, rounded cards, and shadows screen by screen.</p>
+            <h3>Without it</h3>
+            <p>Codex can build a decent screen and still invent new spacing, colors, cards, and shadows on the next one.</p>
           </article>
           <article>
-            <h3>With this skill</h3>
-            <p>Codex reads <code>DESIGN.md</code>, applies tokens and component rules, then checks the rendered UI at desktop and mobile widths.</p>
+            <h3>With it</h3>
+            <p>Codex reads <code>DESIGN.md</code>, applies the tokens, follows the component rules, and checks desktop and mobile.</p>
           </article>
         </div>
         <div class="link-row" aria-label="Project files">
           <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/SKILL.md">SKILL.md</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/references/DESIGN.md">Starter DESIGN.md</a>
+          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/references/DESIGN.md">DESIGN.md</a>
           <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/examples/minimal-repo/DESIGN.md">Minimal example</a>
         </div>
       </section>
 
       <section class="test" id="test">
         <div>
-          <p class="eyebrow">Test it yourself</p>
-          <h2>Two-minute proof loop.</h2>
-          <p>This repo includes a QA fixture and smoke script so the showcase can be tested like a real product.</p>
+          <p class="eyebrow">Run the proof</p>
+          <h2>Two minutes. No hand-waving.</h2>
+          <p>Install the skill, run the fixture, and watch a generic page move toward the rules.</p>
         </div>
         <ol class="test-list">
-          <li>Copy the install prompt into Codex.</li>
+          <li>Copy the install prompt.</li>
           <li>Restart Codex.</li>
-          <li>Add <code>DESIGN.md</code> to a repo.</li>
+          <li>Add <code>DESIGN.md</code>.</li>
           <li>Run <code>$design-system Make this page follow DESIGN.md.</code></li>
           <li>Confirm Codex read or applied the rules in its response, diff, or rendered UI.</li>
         </ol>
@@ -122,9 +122,9 @@
 
       <section class="files" id="files">
         <div>
-          <p class="eyebrow">What ships</p>
-          <h2>Small folder. Easy to steal.</h2>
-          <p>Copy the skill as-is, then replace the starter <code>DESIGN.md</code> with your own taste.</p>
+          <p class="eyebrow">What you get</p>
+          <h2>Small folder. Real leverage.</h2>
+          <p>Use the starter. Replace the taste. Keep the habit.</p>
         </div>
         <div class="file-list">
           <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/SKILL.md">skills/design-system/SKILL.md</a>
@@ -160,7 +160,7 @@
       copyButton?.addEventListener("click", async () => {
         try {
           await copyText(installPrompt);
-          if (copyStatus) copyStatus.textContent = "Copied. Paste it into Codex, then restart Codex.";
+          if (copyStatus) copyStatus.textContent = "Copied. Paste it into Codex. Restart once.";
           copyButton.textContent = "Copied";
         } catch {
           if (copyStatus) copyStatus.textContent = "Copy failed. Select the prompt in the box and copy it manually.";

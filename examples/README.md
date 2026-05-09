@@ -1,10 +1,10 @@
 # Examples
 
-This folder shows the smallest repo-local install.
+Smallest useful install.
 
-Copy `examples/minimal-repo/.agents/skills/design-system` into their project, then copy or customize `examples/minimal-repo/DESIGN.md` at the project root.
+Copy `examples/minimal-repo/.agents/skills/design-system` into a project. Then copy or customize `examples/minimal-repo/DESIGN.md` at the project root.
 
-For a fuller starter kit, adapt the files in `skills/design-system/references/` from the root of this repo.
+For a fuller starter kit, adapt `skills/design-system/references/`.
 
 The resulting project shape is:
 
@@ -17,10 +17,10 @@ their-repo/
         SKILL.md
 ```
 
-Then ask Codex:
+Then tell Codex:
 
 ```text
 $design-system Make this page match DESIGN.md.
 ```
 
-Restart Codex after adding a new skill so it can be discovered.
+Restart Codex after adding a new skill.

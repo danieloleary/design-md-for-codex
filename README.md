@@ -1,10 +1,10 @@
 # design-md-for-codex
 
-A tiny Codex skill that makes the agent read `DESIGN.md` before frontend UI work.
+Give Codex taste. Make it use it.
 
-Use it when you are tired of repeating the same color, spacing, typography, component, and "make it less generic" feedback.
+This is a tiny Codex skill that makes the agent read `DESIGN.md` before it touches UI. Use it when you are done repeating the same color, spacing, typography, component, and "make it less generic" feedback.
 
-## Quick Start
+## Start
 
 Paste this into Codex:
 
@@ -12,11 +12,11 @@ Paste this into Codex:
 Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
 ```
 
-Then:
+Then do the obvious three:
 
 1. Restart Codex.
 2. Add `DESIGN.md` at the root of your repo.
-3. Ask Codex for UI work.
+3. Ask Codex to build, review, or refactor UI.
 
 Example prompt:
 
@@ -24,19 +24,19 @@ Example prompt:
 $design-system Make this page follow DESIGN.md.
 ```
 
-## Why DESIGN.md Rocks
+## Why DESIGN.md Works
 
-`DESIGN.md` gives Codex a design source of truth that lives in the repo. Instead of re-explaining colors, typography, spacing, components, accessibility, voice, and visual no-go zones in every prompt, you write them once and let the skill make reading that file the default habit.
+`DESIGN.md` puts product taste where agents can find it. Colors. Type. Spacing. Components. Accessibility. Voice. No-go zones. Write it once. Let every UI pass start there.
 
 ## What The Skill Does
 
-The `design-system` skill tells Codex to:
+The `design-system` skill makes Codex:
 
 1. Find the repo's `DESIGN.md`.
-2. Treat it as the visual source of truth.
+2. Treat it as the source of truth.
 3. Use documented colors, type, spacing, components, motion, and accessibility rules.
-4. Avoid inventing a new visual system when the repo already has one.
-5. Check rendered UI at desktop and mobile sizes when frontend code changes.
+4. Stop inventing a new visual system when the repo already has one.
+5. Check rendered UI on desktop and mobile when frontend code changes.
 
 ## What Ships
 
@@ -50,13 +50,13 @@ skills/design-system/
     tokens.json
 ```
 
-The bundled `DESIGN.md` is a starter, not a rulebook. Dan's default taste leans dark-first and high-signal: monochrome command surfaces, warm editorial support surfaces, one terracotta accent, clean borders, and no generic UI soup.
+The bundled `DESIGN.md` is a starter, not a law. Dan's default taste is dark-first and high-signal: monochrome command surfaces, warm editorial support surfaces, one terracotta accent, clean borders, no generic UI soup.
 
-Replace it with your own taste.
+Replace it with your taste.
 
-## Test It Yourself
+## Prove It
 
-1. Copy the install prompt into Codex.
+1. Copy the install prompt.
 2. Restart Codex.
 3. Add `DESIGN.md` to a repo.
 4. Run:
@@ -65,27 +65,27 @@ Replace it with your own taste.
    ```
 5. Confirm Codex read or applied `DESIGN.md` by checking its response, diff, or rendered UI.
 
-This repo also includes a smoke test:
+Run the local smoke test:
 
 ```powershell
 .\qa\smoke-test.ps1
 ```
 
-Smoke test prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and the local Codex system skills that ship with recent Codex builds.
+Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and recent Codex system skills.
 
 ## Staying Current
 
-Codex and skill conventions can move fast, so this repo includes a daily GitHub Actions drift check:
+Codex moves fast. This repo checks itself every day:
 
 ```powershell
 .\qa\ci-check.ps1
 ```
 
-It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, and common encoding problems. See `MAINTAINING.md` for the update loop.
+It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, and common encoding problems. See `MAINTAINING.md`.
 
 ## Repo-Local Install
 
-Copy the skill into your project:
+Drop the skill into a project:
 
 ```text
 .agents/
@@ -97,17 +97,17 @@ Copy the skill into your project:
         DESIGN.md
 ```
 
-Then add your project-specific `DESIGN.md` at the repo root.
+Then put your project `DESIGN.md` at the repo root.
 
 ## Customize
 
-- `DESIGN.md`: your real design rules and taste.
+- `DESIGN.md`: your real design rules.
 - `SKILL.md`: the workflow Codex should follow.
 - `agents/openai.yaml`: display metadata.
 - `theme.css` and `tokens.json`: optional starter tokens.
 
 ## Why Dan Made It
 
-Codex is better when it feels like it has been paying attention.
+Codex is better when it acts like it has been paying attention.
 
-This is a small habit for keeping UI taste from disappearing between prompts. Fork it, tune it, and make it yours.
+This is a small habit for keeping taste from disappearing between prompts. Fork it. Tune it. Make it yours.

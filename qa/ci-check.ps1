@@ -59,6 +59,7 @@ try {
   Step "Checking required files"
   $RequiredFiles = @(
     "README.md",
+    "COPY.md",
     "index.html",
     "landing.css",
     "skills/design-system/SKILL.md",
@@ -102,6 +103,7 @@ try {
 
   Step "Checking encoding"
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "README.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "COPY.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "index.html")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "landing.css")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
@@ -119,7 +121,7 @@ try {
   Write-Host "OK tokens.json parses"
 
   Step "Checking public GitHub and Pages URLs"
-  Assert-Url "$PagesRoot/" "Make Codex remember your taste"
+  Assert-Url "$PagesRoot/" "design-md-for-codex"
   Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
   Assert-Url "$PagesRoot/qa/smoke-test.ps1" "Smoke test passed"
   Assert-Url "$GitHubRoot/blob/$MainBranch/skills/design-system/SKILL.md" "design-system"

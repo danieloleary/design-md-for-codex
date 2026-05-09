@@ -1,7 +1,7 @@
 interface:
   display_name: "Design System"
-  short_description: "Apply DESIGN.md to frontend UI work."
+  short_description: "Make Codex follow DESIGN.md."
   brand_color: "#C96442"
-  default_prompt: "Use $design-system to read DESIGN.md first, then build or review the UI using its design rules."
+  default_prompt: "Use $design-system to read DESIGN.md first, then make this UI follow its rules."
 policy:
   allow_implicit_invocation: true

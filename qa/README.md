@@ -1,6 +1,6 @@
 # QA
 
-This folder proves the showcase is advertising a real Codex skill, not just a pretty idea.
+Proof that the showcase points at a real skill.
 
 ## Daily CI Check
 
@@ -10,7 +10,7 @@ GitHub Actions runs this every day and on each push:
 .\qa\ci-check.ps1
 ```
 
-It is cloud-friendly and does not assume the runner has the Codex desktop app's local system-skill folders. It checks public URLs, required files, DESIGN.md linting, token parsing, install prompt text, and encoding artifacts.
+It runs in the cloud and does not assume the Codex desktop app exists. It checks public URLs, required files, DESIGN.md linting, token parsing, install prompt text, and encoding artifacts.
 
 ## Smoke Test
 
@@ -28,7 +28,7 @@ Prerequisites:
 - Network access
 - Local Codex system skills, including `skill-installer` and `skill-creator`
 
-The script checks:
+It checks:
 
 - The public GitHub skill path downloads into a temp folder.
 - Required skill files exist.
@@ -39,7 +39,7 @@ The script checks:
 
 ## Manual Codex Test
 
-1. Copy this prompt into Codex:
+1. Paste this into Codex:
 
    ```text
    Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
@@ -53,7 +53,7 @@ The script checks:
    $design-system Make this page follow DESIGN.md.
    ```
 
-5. Confirm Codex read or applied `DESIGN.md` by checking its response, diff, or rendered UI:
+5. Confirm Codex read or applied `DESIGN.md` by checking the response, diff, or rendered UI:
    - dark command surface
    - terracotta primary action
    - no blue gradient

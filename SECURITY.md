@@ -1,7 +1,7 @@
 # Security
 
-Please do not open public issues for secrets, tokens, private repo URLs, or other sensitive information.
+Do not post secrets in public issues.
 
-This project is a Codex skill and static documentation. It should not require credentials. If you find a security concern, report it privately to the repo owner.
+This repo is a Codex skill and static documentation. It should not need credentials. If you find a security concern, report it privately to the repo owner.
 
-When adapting this skill for your own project, avoid placing private tokens, internal URLs, customer information, or proprietary brand assets inside public `DESIGN.md` examples.
+When adapting the skill, keep private tokens, internal URLs, customer data, and proprietary brand assets out of public `DESIGN.md` examples.
