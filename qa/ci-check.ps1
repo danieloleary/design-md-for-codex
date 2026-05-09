@@ -62,6 +62,7 @@ try {
     "COPY.md",
     "index.html",
     "landing.css",
+    "assets/hero-art.png",
     "assets/proof/fixture-before.png",
     "assets/proof/fixture-after.png",
     "skills/design-system/SKILL.md",
@@ -105,6 +106,20 @@ try {
   }
   Write-Host "OK local href targets"
 
+  Step "Checking local images"
+  $SrcMatches = [regex]::Matches($IndexHtml, 'src="([^"]+)"')
+  foreach ($Match in $SrcMatches) {
+    $Src = $Match.Groups[1].Value
+    if ($Src -match "^[a-zA-Z][a-zA-Z0-9+.-]*:") { continue }
+    $Target = ($Src -split "#")[0]
+    if (-not $Target) { continue }
+    $TargetPath = Join-Path $RepoRoot $Target
+    if (-not (Test-Path -LiteralPath $TargetPath -PathType Leaf)) {
+      throw "Broken local image src: $Src"
+    }
+  }
+  Write-Host "OK local image targets"
+
   Step "Checking encoding"
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "README.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "COPY.md")
@@ -126,6 +141,9 @@ try {
 
   Step "Checking public GitHub and Pages URLs"
   Assert-Url "$PagesRoot/" "design-md-for-codex"
+  Assert-Url "$PagesRoot/assets/hero-art.png"
+  Assert-Url "$PagesRoot/assets/proof/fixture-before.png"
+  Assert-Url "$PagesRoot/assets/proof/fixture-after.png"
   Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
   Assert-Url "$PagesRoot/qa/smoke-test.ps1" "Smoke test passed"
   Assert-Url "$GitHubRoot/blob/$MainBranch/skills/design-system/SKILL.md" "design-system"
