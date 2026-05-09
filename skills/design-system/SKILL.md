@@ -9,7 +9,7 @@ metadata:
 
 Use this skill to keep UI work aligned with a repository's visual system.
 
-The bundled `references/DESIGN.md` is a starter system with a warm, restrained product direction. Treat it as a fallback example, not a house style.
+The bundled `references/DESIGN.md` is a starter system with a dark-first, monochrome command-center direction softened by warm editorial surfaces. Treat it as a fallback example, not a house style.
 
 ## Workflow
 

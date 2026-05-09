@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: Codex Workshop
-description: A warm, restrained design system for focused developer tools, research workspaces, and agent-assisted building, combining editorial warmth, monochrome restraint, and precise workbench layout.
+description: A dark-first, warm-edged design system for focused developer tools, research workspaces, and agent-assisted building, combining monochrome command-center restraint, editorial warmth, and precise workbench layout.
 colors:
   ink: "#121417"
   near-black: "#141413"
@@ -168,16 +168,16 @@ components:
 
 ## Overview
 
-Codex Workshop is a design system for serious work that still feels alive. It should feel crisp, capable, and quietly optimistic: a workspace where code, research, and decisions can sit together without visual noise. The tone is practical and exacting, with small moments of warmth through color, spacing, and confident typography.
+Codex Workshop is a design system for serious work that still feels alive. It should feel dark, sharp, warm, and awake: a workspace where code, research, and decisions can sit together without visual noise. The tone is practical and exacting, with small moments of warmth through color, spacing, and confident typography.
 
 Use this system for developer tools, dashboards, documentation surfaces, research workspaces, local utilities, and agent-assisted workflows. Interfaces should feel built for repeated use, fast scanning, and clear action.
 
-Default aesthetic: editorial warmth plus monochrome restraint plus precise workbench layout. Light mode should feel humane and readable; dark mode should feel sparse, monochrome, and exact. The result should be original, not a clone of any referenced brand.
+Default aesthetic: monochrome command-center restraint plus warm editorial memory plus precise workbench layout. Dark mode should feel sparse, exact, and high-signal; light surfaces should feel humane and readable when the work needs warmth. The result should be original, not a clone of any referenced brand.
 
 ## Design Principles
 
 1. Useful first, beautiful through restraint.
-2. Warm light mode, exact dark mode.
+2. Dark-first command surfaces, warm editorial support surfaces.
 3. One accent per decision area.
 4. Borders before shadows.
 5. Typography and alignment carry the personality.
@@ -186,15 +186,15 @@ Default aesthetic: editorial warmth plus monochrome restraint plus precise workb
 
 ## Mode Recipes
 
-Light mode is the default for writing, research, planning, docs, and collaboration. Use `parchment` or `paper` as the page background, `ivory` for panels, `porcelain` for active or raised controls, and `terracotta` for the primary action.
+Light mode is best for writing, research, planning, docs, and collaboration. Use `parchment` or `paper` as the page background, `ivory` for panels, `porcelain` for active or raised controls, and `terracotta` for the primary action.
 
-Dark mode is the default for terminal-adjacent workflows, monitoring, coding, agent traces, logs, observability, and command-center views. Use `void` for the page background, `dark-surface` for panels, translucent white borders, and opacity-based text hierarchy.
+Dark mode is the default for first impressions, terminal-adjacent workflows, monitoring, coding, agent traces, logs, observability, and command-center views. Use `void` for the page background, `dark-surface` for panels, translucent white borders, and opacity-based text hierarchy.
 
 Do not make dark mode blue-gray. It should feel like precise monochrome with a warm accent, not a generic dashboard skin.
 
 ## Colors
 
-Use `parchment` or `paper` for the app background and `ivory` or `porcelain` for active surfaces. Use `ink` or `near-black` for primary text, `charcoal-warm` and `graphite` for secondary headings, and `slate` or `stone` for metadata, labels, captions, helper text, and inactive controls.
+Use `void` or `near-black` for high-focus command surfaces. Use `parchment` or `paper` for slower reading and planning surfaces, with `ivory` or `porcelain` for active panels. Use `ink` or `near-black` for primary text on light surfaces, `charcoal-warm` and `graphite` for secondary headings, and `slate` or `stone` for metadata, labels, captions, helper text, and inactive controls.
 
 Use `terracotta` as the primary action color. A screen should usually have one dominant terracotta action. Use `terracotta-dark` for pressed states, selected navigation, or high-emphasis links on pale backgrounds. Use `focus-blue` only for keyboard focus rings, selection outlines, and accessibility affordances where blue carries a familiar platform meaning.
 
@@ -329,5 +329,5 @@ Don't:
 When asking an AI coding agent to build UI with this file, use language like:
 
 ```text
-Use DESIGN.md as the source of truth. Build the actual working interface first. Aim for editorial warmth in light mode, monochrome restraint in dark mode, and precise workbench layout. Use terracotta as the main accent, avoid generic SaaS blue, use borders before shadows, and verify the result at desktop and mobile widths.
+Use DESIGN.md as the source of truth. Build the actual working interface first. Aim for dark-first command-center restraint, warm editorial support surfaces, and precise workbench layout. Use terracotta as the main accent, avoid generic SaaS blue, use borders before shadows, and verify the result at desktop and mobile widths.
 ```

@@ -51,7 +51,7 @@ skills/design-system/
     tokens.json
 ```
 
-The bundled `DESIGN.md` is an example, not a prison. It starts with a warm, restrained product direction: editorial light surfaces, precise dark mode, one terracotta accent, borders before shadows, and no generic SaaS soup.
+The bundled `DESIGN.md` is an example, not a prison. It starts with Dan's current jam: dark command-center restraint, warm editorial support surfaces, one terracotta accent, borders before shadows, and no generic SaaS soup.
 
 Replace it with your own taste.
 

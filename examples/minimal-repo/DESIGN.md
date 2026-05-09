@@ -1,12 +1,17 @@
 ---
 version: starter
-name: Friendly Product UI
+name: Dark Warm Product UI
 colors:
+  void: "#0F1012"
+  dark-surface: "#1F2228"
   background: "#F5F4ED"
   surface: "#FAF9F5"
   text: "#141413"
+  dark-text: "rgba(255,255,255,1)"
+  dark-muted: "rgba(255,255,255,0.68)"
   muted: "#87867F"
   border: "#E7EBEF"
+  dark-border: "rgba(255,255,255,0.12)"
   accent: "#C96442"
 typography:
   body:
@@ -23,13 +28,15 @@ spacing:
   xl: 24px
 ---
 
-# Friendly Product UI
+# Dark Warm Product UI
 
-Use warm neutral backgrounds, near-black text, a single terracotta accent, compact controls, and thin borders before shadows.
+Use dark command surfaces for focus, warm neutral surfaces for reading, near-black or white text by mode, a single terracotta accent, compact controls, and thin borders before shadows.
 
 Do:
 
 - Build the usable interface first.
+- Default first impressions, code, traces, and command surfaces to dark mode.
+- Use warm light surfaces for docs, planning, and slower reading.
 - Keep navigation and calls to action clear.
 - Use consistent spacing, radii, typography, and component states.
 - Verify the UI at desktop and mobile widths.

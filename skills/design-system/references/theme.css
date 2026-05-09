@@ -34,20 +34,6 @@
 }
 
 :root {
-  --cw-bg: var(--color-parchment);
-  --cw-surface: var(--color-ivory);
-  --cw-surface-raised: var(--color-porcelain);
-  --cw-text-primary: var(--color-near-black);
-  --cw-text-secondary: var(--color-charcoal-warm);
-  --cw-text-muted: var(--color-stone);
-  --cw-border: var(--color-mist);
-  --cw-accent: var(--color-terracotta);
-  --cw-accent-pressed: var(--color-terracotta-dark);
-  --cw-focus: var(--color-focus-blue);
-}
-
-.dark,
-[data-theme="dark"] {
   --cw-bg: var(--color-void);
   --cw-surface: var(--color-dark-surface);
   --cw-surface-raised: rgba(255, 255, 255, 0.03);
@@ -56,6 +42,21 @@
   --cw-text-muted: rgba(255, 255, 255, 0.50);
   --cw-border: rgba(255, 255, 255, 0.10);
   --cw-border-strong: rgba(255, 255, 255, 0.20);
+  --cw-accent: var(--color-terracotta);
+  --cw-accent-pressed: var(--color-terracotta-dark);
+  --cw-focus: var(--color-focus-blue);
+}
+
+.light,
+[data-theme="light"] {
+  --cw-bg: var(--color-parchment);
+  --cw-surface: var(--color-ivory);
+  --cw-surface-raised: var(--color-porcelain);
+  --cw-text-primary: var(--color-near-black);
+  --cw-text-secondary: var(--color-charcoal-warm);
+  --cw-text-muted: var(--color-stone);
+  --cw-border: var(--color-mist);
+  --cw-border-strong: rgba(20, 20, 19, 0.20);
   --cw-accent: var(--color-terracotta);
   --cw-accent-pressed: var(--color-terracotta-dark);
   --cw-focus: var(--color-focus-blue);
