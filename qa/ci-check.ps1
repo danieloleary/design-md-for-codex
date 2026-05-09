@@ -178,6 +178,7 @@ try {
   Assert-Url "$PagesRoot/assets/proof/ai-workbench-detail.png"
   Assert-Url "$PagesRoot/LAUNCH.md" "Launch Plan"
   Assert-Url "$PagesRoot/SHARE.md" "Where To Share"
+  Assert-Url "$PagesRoot/TEDDY-LAUNCH.md" "Teddy Launch Desk"
   Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
   Assert-Url "$PagesRoot/qa/smoke-test.ps1" "Smoke test passed"
   Assert-Url "$GitHubRoot/blob/$MainBranch/skills/design-system/SKILL.md" "design-system"
