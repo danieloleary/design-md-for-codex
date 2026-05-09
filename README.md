@@ -76,15 +76,15 @@ Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and rece
 
 ## Actual Codex Run
 
-I ran the published skill against `qa/fixture` in a throwaway copy.
+I ran the published skill against a deliberately loud `qa/fixture` in a throwaway copy.
 
-![Before: generic blue gradient UI](assets/proof/fixture-before.png)
+![Before: loud generic SaaS UI](assets/proof/fixture-before.png)
 
-![After: Codex read DESIGN.md and applied the rules](assets/proof/fixture-after.png)
+![After: Codex read DESIGN.md and turned it into a dark workbench](assets/proof/fixture-after.png)
 
 Artifacts:
 
-- `qa/fixture/index.html`: reusable bad starting point.
+- `qa/fixture/index.html`: reusable bad starting point with generic SaaS soup.
 - `qa/fixture/after.html`: output from the Codex proof run.
 - `qa/fixture/codex-result.md`: final Codex response from the run.
 

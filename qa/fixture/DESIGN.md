@@ -38,4 +38,7 @@ Rules:
 - Remove blue gradients and decorative glow.
 - Keep border radius at 8px or less.
 - Keep controls compact and readable.
+- Convert generic marketing-card energy into a practical workbench: clear hero, command-style checklist, tight metrics, and evidence notes.
+- Use borders, spacing, and hierarchy instead of shadows, blobs, pills, or glass effects.
+- Keep the before/after contrast obvious without changing the page's core meaning.
 - Verify the page works at mobile and desktop widths.

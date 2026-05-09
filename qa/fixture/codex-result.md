@@ -1,11 +1,11 @@
-Done. I read `DESIGN.md` and edited only the copied fixture `index.html`.
+Implemented the DESIGN.md pass in the copied fixture `index.html`.
 
 Applied rules:
 - `void` page background, `surface` panel, thin `border`
-- Inter/system typography with the documented body size and line height
-- Accent color only on the primary button
-- Removed blue gradient, glow/shadow, pill radius, and unrelated colors
-- Kept radii at `8px` or less and controls compact
-- Added responsive sizing and focus-visible styling
+- Inter/system typography
+- `6px` controls and `8px` panels
+- Accent color only on the primary action
+- Removed the blue/purple gradient, glow blob, pill buttons, heavy shadows, and unrelated colors
+- Reshaped the content into a tighter workbench with checklist, metrics, and evidence notes
 
-Verified with Chrome headless at desktop and a real 390px mobile emulation; mobile reported no horizontal overflow.
+Verified with Chrome renders at desktop and mobile widths; both reported no horizontal overflow.

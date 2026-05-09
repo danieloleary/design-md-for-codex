@@ -50,13 +50,13 @@ Why:
 Proof:
 
 - The habit
-- Before: plausible UI. After: UI with a source.
+- Before: generic soup. After: governed workbench.
 - Without it
-- Codex can build a decent screen and still invent new spacing, colors, cards, and shadows on the next one.
+- Codex can ship loud default UI: gradients, blobs, pill buttons, huge radii, and a new visual system every screen.
 - With it
-- Codex reads `DESIGN.md`, applies the tokens, follows the component rules, and checks desktop and mobile.
-- Before: generic UI
-- After: Codex read DESIGN.md
+- Codex reads `DESIGN.md`, applies the tokens, turns noise into a workbench, and checks desktop and mobile.
+- Before: generic SaaS soup
+- After: DESIGN.md workbench
 - SKILL.md
 - DESIGN.md
 - Minimal example
