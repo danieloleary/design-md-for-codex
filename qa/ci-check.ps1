@@ -107,11 +107,11 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"
-  & npx --yes @google/design.md lint (Join-Path $RepoRoot "skills/design-system/references/DESIGN.md")
+  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "skills/design-system/references/DESIGN.md")
   if ($LASTEXITCODE -ne 0) { throw "Bundled DESIGN.md lint failed." }
-  & npx --yes @google/design.md lint (Join-Path $RepoRoot "examples/minimal-repo/DESIGN.md")
+  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "examples/minimal-repo/DESIGN.md")
   if ($LASTEXITCODE -ne 0) { throw "Minimal DESIGN.md lint failed." }
-  & npx --yes @google/design.md lint (Join-Path $RepoRoot "qa/fixture/DESIGN.md")
+  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "qa/fixture/DESIGN.md")
   if ($LASTEXITCODE -ne 0) { throw "QA fixture DESIGN.md lint failed." }
 
   Step "Parsing tokens"

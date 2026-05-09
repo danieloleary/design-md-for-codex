@@ -15,6 +15,7 @@ colors:
   ivory: "#FAF9F5"
   paper: "#F8F7F3"
   porcelain: "#FFFFFF"
+  primary: "#9F442B"
   terracotta: "#C96442"
   terracotta-dark: "#9F442B"
   focus-blue: "#3898EC"
@@ -23,12 +24,12 @@ colors:
   coral: "#D84E3F"
   violet: "#6E56CF"
   dark-surface: "#1F2228"
-  dark-surface-subtle: "rgba(255,255,255,0.03)"
-  dark-border: "rgba(255,255,255,0.10)"
-  dark-border-strong: "rgba(255,255,255,0.20)"
-  dark-text-primary: "rgba(255,255,255,1)"
-  dark-text-secondary: "rgba(255,255,255,0.70)"
-  dark-text-muted: "rgba(255,255,255,0.50)"
+  dark-surface-subtle: "#17191D"
+  dark-border: "#2A2C30"
+  dark-border-strong: "#3E4044"
+  dark-text-primary: "#FFFFFF"
+  dark-text-secondary: "#B8B8B8"
+  dark-text-muted: "#808080"
 typography:
   display:
     fontFamily: Inter, ui-sans-serif, system-ui, sans-serif
@@ -107,61 +108,47 @@ modes:
     accent: "{colors.terracotta}"
 components:
   button-primary:
-    backgroundColor: "{colors.terracotta}"
+    backgroundColor: "{colors.primary}"
     textColor: "{colors.porcelain}"
-    borderRadius: "{rounded.sm}"
+    rounded: "{rounded.sm}"
     typography: "{typography.label}"
   button-secondary:
     backgroundColor: "{colors.ivory}"
     textColor: "{colors.ink}"
-    borderColor: "{colors.mist}"
-    borderRadius: "{rounded.sm}"
+    rounded: "{rounded.sm}"
     typography: "{typography.label}"
   card:
     backgroundColor: "{colors.ivory}"
     textColor: "{colors.ink}"
-    borderColor: "{colors.mist}"
-    borderRadius: "{rounded.md}"
+    rounded: "{rounded.md}"
   input:
     backgroundColor: "{colors.porcelain}"
     textColor: "{colors.ink}"
-    borderColor: "{colors.mist}"
-    borderRadius: "{rounded.sm}"
+    rounded: "{rounded.sm}"
   app-shell:
     backgroundColor: "{colors.parchment}"
     textColor: "{colors.near-black}"
-    sidebarWidth: 264px
-    borderColor: "{colors.mist}"
   sidebar:
     backgroundColor: "{colors.ivory}"
     textColor: "{colors.charcoal-warm}"
-    activeBackgroundColor: "{colors.porcelain}"
-    activeTextColor: "{colors.near-black}"
-    borderColor: "{colors.mist}"
   toolbar:
     height: 48px
     backgroundColor: "{colors.ivory}"
-    borderColor: "{colors.mist}"
   command-palette:
     backgroundColor: "{colors.porcelain}"
     textColor: "{colors.near-black}"
-    borderColor: "{colors.mist}"
-    borderRadius: "{rounded.lg}"
+    rounded: "{rounded.lg}"
   chat-panel:
     backgroundColor: "{colors.ivory}"
-    userAccentColor: "{colors.terracotta}"
-    assistantAccentColor: "{colors.violet}"
-    borderColor: "{colors.mist}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.md}"
   data-table:
     backgroundColor: "{colors.ivory}"
-    headerBackgroundColor: "{colors.paper}"
-    borderColor: "{colors.mist}"
-    rowHoverBackgroundColor: "{colors.porcelain}"
+    textColor: "{colors.ink}"
   code-block:
     backgroundColor: "{colors.void}"
     textColor: "{colors.dark-text-primary}"
-    borderColor: "{colors.dark-border}"
-    borderRadius: "{rounded.md}"
+    rounded: "{rounded.md}"
 ---
 
 # Codex Workshop Design System

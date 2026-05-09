@@ -11,6 +11,7 @@
   --color-ivory: #FAF9F5;
   --color-paper: #F8F7F3;
   --color-porcelain: #FFFFFF;
+  --color-primary: #9F442B;
   --color-terracotta: #C96442;
   --color-terracotta-dark: #9F442B;
   --color-focus-blue: #3898EC;
@@ -19,6 +20,12 @@
   --color-coral: #D84E3F;
   --color-violet: #6E56CF;
   --color-dark-surface: #1F2228;
+  --color-dark-surface-subtle: #17191D;
+  --color-dark-border: #2A2C30;
+  --color-dark-border-strong: #3E4044;
+  --color-dark-text-primary: #FFFFFF;
+  --color-dark-text-secondary: #B8B8B8;
+  --color-dark-text-muted: #808080;
   --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", SFMono-Regular, Consolas, monospace;
   --radius-xs: 4px;
@@ -36,13 +43,13 @@
 :root {
   --cw-bg: var(--color-void);
   --cw-surface: var(--color-dark-surface);
-  --cw-surface-raised: rgba(255, 255, 255, 0.03);
-  --cw-text-primary: rgba(255, 255, 255, 1);
-  --cw-text-secondary: rgba(255, 255, 255, 0.70);
-  --cw-text-muted: rgba(255, 255, 255, 0.50);
-  --cw-border: rgba(255, 255, 255, 0.10);
-  --cw-border-strong: rgba(255, 255, 255, 0.20);
-  --cw-accent: var(--color-terracotta);
+  --cw-surface-raised: var(--color-dark-surface-subtle);
+  --cw-text-primary: var(--color-dark-text-primary);
+  --cw-text-secondary: var(--color-dark-text-secondary);
+  --cw-text-muted: var(--color-dark-text-muted);
+  --cw-border: var(--color-dark-border);
+  --cw-border-strong: var(--color-dark-border-strong);
+  --cw-accent: var(--color-primary);
   --cw-accent-pressed: var(--color-terracotta-dark);
   --cw-focus: var(--color-focus-blue);
 }
