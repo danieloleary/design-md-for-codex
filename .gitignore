@@ -13,3 +13,5 @@ coverage/
 !.env.example
 .codex/
 generated_images/
+output/
+.playwright-cli/

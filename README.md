@@ -6,8 +6,10 @@ Use it when you are tired of repeating the same color, spacing, typography, comp
 
 ## Quick Start
 
+Paste this into Codex:
+
 ```text
-$skill-installer install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
 ```
 
 Then:
@@ -22,7 +24,11 @@ Example prompt:
 $design-system Make this page follow DESIGN.md.
 ```
 
-## What It Does
+## Why DESIGN.md Rocks
+
+`DESIGN.md` gives Codex a design source of truth that lives in the repo. Instead of re-explaining colors, typography, spacing, components, accessibility, voice, and visual no-go zones in every prompt, you write them once and let the skill make reading that file the default habit.
+
+## What The Skill Does
 
 The `design-system` skill tells Codex to:
 
@@ -48,6 +54,25 @@ The bundled `DESIGN.md` is a starter, not a rulebook. Dan's default taste leans 
 
 Replace it with your own taste.
 
+## Test It Yourself
+
+1. Copy the install prompt into Codex.
+2. Restart Codex.
+3. Add `DESIGN.md` to a repo.
+4. Run:
+   ```text
+   $design-system Make this page follow DESIGN.md.
+   ```
+5. Confirm Codex read or applied `DESIGN.md` by checking its response, diff, or rendered UI.
+
+This repo also includes a smoke test:
+
+```powershell
+.\qa\smoke-test.ps1
+```
+
+Smoke test prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and the local Codex system skills that ship with recent Codex builds.
+
 ## Repo-Local Install
 
 Copy the skill into your project:
@@ -70,13 +95,6 @@ Then add your project-specific `DESIGN.md` at the repo root.
 - `SKILL.md`: the workflow Codex should follow.
 - `agents/openai.yaml`: display metadata.
 - `theme.css` and `tokens.json`: optional starter tokens.
-
-## Validate
-
-```powershell
-npx @google/design.md lint skills/design-system/references/DESIGN.md
-Get-Content skills/design-system/references/tokens.json | ConvertFrom-Json
-```
 
 ## Why Dan Made It
 
