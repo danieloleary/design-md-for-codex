@@ -1,28 +1,28 @@
 # design-md-for-codex
 
-A Codex skill that makes the agent read `DESIGN.md` before frontend UI work.
+A tiny Codex skill that makes the agent read `DESIGN.md` before frontend UI work.
 
-Use it when you want Codex to follow your product's colors, typography, spacing, components, accessibility rules, and visual no-go zones without re-prompting them every time.
+Use it when you are tired of repeating the same color, spacing, typography, component, and "make it less generic" feedback.
 
-## TL;DR
+## Quick Start
 
-- Codex can build UI quickly.
-- Fast UI can still drift from your product.
-- `DESIGN.md` gives your design system a place to live in the repo.
-- This skill makes reading that file the default first step.
-- Result: fewer mystery colors, random shadows, soft cards, and "make it less generic" loops.
+```text
+$skill-installer install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+```
 
-## Why
+Then:
 
-You ask Codex for a dashboard. It ships something decent.
+1. Restart Codex.
+2. Add `DESIGN.md` at the root of your repo.
+3. Ask Codex for UI work.
 
-Then you ask for a settings page, and suddenly the spacing is different, the cards got puffier, the accent color wandered off, and the whole thing feels like it came from a different product.
+Example prompt:
 
-That is not because Codex cannot design. It is because your design system is living in chat instead of the repo.
+```text
+$design-system Make this page follow DESIGN.md.
+```
 
-This skill gives Codex a repeatable first step: read the repo's `DESIGN.md`, then make UI decisions from that file.
-
-## What the skill does
+## What It Does
 
 The `design-system` skill tells Codex to:
 
@@ -32,14 +32,7 @@ The `design-system` skill tells Codex to:
 4. Avoid inventing a new visual system when the repo already has one.
 5. Check rendered UI at desktop and mobile sizes when frontend code changes.
 
-## Who this is for
-
-- Teams and solo builders who want Codex UI work to stay consistent across screens.
-- Designers and design engineers who want agents to respect product rules.
-- People building apps with Codex who are tired of re-explaining the same UI taste.
-- Anyone packaging a reusable Codex workflow for a team, client, or open-source project.
-
-## What is included
+## What Ships
 
 ```text
 skills/design-system/
@@ -51,13 +44,11 @@ skills/design-system/
     tokens.json
 ```
 
-The bundled `DESIGN.md` is an example, not a prison. It starts with Dan's current jam: dark command-center restraint, warm editorial support surfaces, one terracotta accent, borders before shadows, and no generic SaaS soup.
+The bundled `DESIGN.md` is a starter, not a rulebook. Dan's default taste leans dark-first and high-signal: monochrome command surfaces, warm editorial support surfaces, one terracotta accent, clean borders, and no generic UI soup.
 
 Replace it with your own taste.
 
-## Install
-
-### Minimal repo-local
+## Repo-Local Install
 
 Copy the skill into your project:
 
@@ -69,40 +60,16 @@ Copy the skill into your project:
       agents/openai.yaml
       references/
         DESIGN.md
-        theme.css
-        tokens.json
 ```
 
-Then put `DESIGN.md` at the root of your repo.
-
-### Full starter kit
-
-Use `skills/design-system/references/` if you want example design rules, CSS tokens, and JSON tokens to adapt.
-
-### From GitHub
-
-Install the published skill from GitHub with:
-
-```text
-$skill-installer install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
-```
-
-Restart Codex after installing a new skill.
-
-## Use it
-
-```text
-$design-system Make this page follow DESIGN.md.
-```
-
-Or just ask for UI work and let Codex choose the skill when the request matches.
+Then add your project-specific `DESIGN.md` at the repo root.
 
 ## Customize
 
-- `DESIGN.md`: your actual taste, tokens, components, and design rules.
+- `DESIGN.md`: your real design rules and taste.
 - `SKILL.md`: the workflow Codex should follow.
-- `agents/openai.yaml`: the display name, short description, and default prompt.
-- `theme.css` and `tokens.json`: optional starter artifacts for implementation.
+- `agents/openai.yaml`: display metadata.
+- `theme.css` and `tokens.json`: optional starter tokens.
 
 ## Validate
 
@@ -111,10 +78,8 @@ npx @google/design.md lint skills/design-system/references/DESIGN.md
 Get-Content skills/design-system/references/tokens.json | ConvertFrom-Json
 ```
 
-## Why Dan made it
+## Why Dan Made It
 
-I made this because I kept wanting Codex to build like it had been paying attention.
+Codex is better when it feels like it has been paying attention.
 
-Not perfect. Not magic. Just a small habit that keeps product taste from disappearing between prompts.
-
-If it helps you, fork it, tune the `DESIGN.md`, and make something sharper for your own team or project.
+This is a small habit for keeping UI taste from disappearing between prompts. Fork it, tune it, and make it yours.
