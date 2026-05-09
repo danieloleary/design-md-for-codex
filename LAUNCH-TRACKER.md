@@ -25,20 +25,20 @@ Day 0 prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discor
 
 GitHub Actions are green. Pages is live. The install path works.
 
-Do you want Teddy to send the approved Teddy-controlled posts/emails now, or hold until tomorrow?
+Do you approve Teddy sending the Teddy-controlled posts/emails now? If yes, Teddy will send them, update this tracker, and monitor replies.
 ```
 
 ## Channel Tracker
 
 | Channel | Owner | Asset | Status | Reply | Action | Follow-Up |
 | --- | --- | --- | --- | --- | --- | --- |
-| X | Teddy | `assets/share-before-after.png` | draft |  |  |  |
+| X | Teddy | `assets/share-before-after.png` | ready for approval |  | post after approval |  |
 | LinkedIn | Dan | `assets/share-before-after.png` | handoff |  |  |  |
-| OpenAI Forum | Teddy drafts, Dan approves | repo link | draft |  |  |  |
-| OpenAI Developers Discord | Teddy drafts, Dan approves | repo link | draft |  |  |  |
-| Friend email | Teddy drafts, Dan approves | repo link | draft |  |  |  |
+| OpenAI Forum | Teddy sends after approval | repo link | ready for approval |  | post after approval |  |
+| OpenAI Developers Discord | Teddy sends after approval | repo link | ready for approval |  | post after approval |  |
+| Friend email | Teddy sends after approval | repo link | ready for approval |  | email after approval |  |
 | GitHub release | Dan/Teddy | release notes | live |  |  |  |
-| Skill directories | Teddy drafts | repo link | queued |  |  |  |
+| Skill directories | Teddy submits after approval | repo link | queued |  | submit after approval |  |
 
 ## Reply Queue
 
@@ -73,6 +73,8 @@ Do you want Teddy to send the approved Teddy-controlled posts/emails now, or hol
 
 ## Next Actions
 
+- Ask Dan to approve or hold each Teddy-controlled channel.
+- Send approved posts/emails.
 - Record who received the launch.
 - Capture the first 10 pieces of feedback.
 - Turn bugs into GitHub issues.
