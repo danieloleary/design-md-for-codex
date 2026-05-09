@@ -45,8 +45,11 @@ function Assert-Url($Url, $ExpectedPattern = $null) {
 
 function Assert-NoEncodingArtifacts($Path) {
   $Content = Get-Content -LiteralPath $Path -Raw
-  if ($Content -match "â|�") {
-    throw "Possible encoding artifact in $Path"
+  $BadChars = @([char]0x00C3, [char]0x00E2, [char]0x00EF, [char]0xFFFD)
+  foreach ($BadChar in $BadChars) {
+    if ($Content.Contains($BadChar)) {
+      throw "Possible encoding artifact in $Path"
+    }
   }
   Write-Host "OK no encoding artifacts in $Path"
 }
@@ -63,8 +66,13 @@ try {
     "index.html",
     "landing.css",
     "assets/hero-art.png",
+    "assets/social-card.png",
+    "assets/repo-banner.png",
+    "assets/share-before-after.png",
     "assets/proof/fixture-before.png",
     "assets/proof/fixture-after.png",
+    "LAUNCH.md",
+    "SHARE.md",
     "skills/design-system/SKILL.md",
     "skills/design-system/agents/openai.yaml",
     "skills/design-system/references/DESIGN.md",
@@ -77,6 +85,7 @@ try {
     "qa/fixture/after.html",
     "qa/fixture/codex-result.md",
     "qa/fixture/expected.md",
+    "qa/generate-launch-assets.py",
     "qa/smoke-test.ps1"
   )
   foreach ($RelativePath in $RequiredFiles) {
@@ -107,11 +116,23 @@ try {
   Write-Host "OK local href targets"
 
   Step "Checking local images"
-  $SrcMatches = [regex]::Matches($IndexHtml, 'src="([^"]+)"')
-  foreach ($Match in $SrcMatches) {
-    $Src = $Match.Groups[1].Value
-    if ($Src -match "^[a-zA-Z][a-zA-Z0-9+.-]*:") { continue }
-    $Target = ($Src -split "#")[0]
+  $ImageTargets = @()
+  $ImageTargets += [regex]::Matches($IndexHtml, 'src="([^"]+)"') | ForEach-Object { $_.Groups[1].Value }
+  $ImageTargets += [regex]::Matches($IndexHtml, 'content="[^"]*(assets/[^"]+)"') | ForEach-Object { $_.Groups[1].Value }
+  $ImageTargets += [regex]::Matches($Readme, '!\[[^\]]*\]\(([^)]+)\)') | ForEach-Object { $_.Groups[1].Value }
+  foreach ($Src in ($ImageTargets | Sort-Object -Unique)) {
+    if ($Src -match "^[a-zA-Z][a-zA-Z0-9+.-]*:") {
+      $Uri = [uri]$Src
+      $Target = $Uri.AbsolutePath.TrimStart("/")
+      $RepoPrefix = "$Repo/"
+      if ($Target.StartsWith($RepoPrefix)) {
+        $Target = $Target.Substring($RepoPrefix.Length)
+      } else {
+        continue
+      }
+    } else {
+      $Target = ($Src -split "#")[0]
+    }
     if (-not $Target) { continue }
     $TargetPath = Join-Path $RepoRoot $Target
     if (-not (Test-Path -LiteralPath $TargetPath -PathType Leaf)) {
@@ -125,6 +146,8 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "COPY.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "index.html")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "landing.css")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "LAUNCH.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "SHARE.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"

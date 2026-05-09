@@ -1,5 +1,7 @@
 # Examples
 
+Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+
 Smallest useful install.
 
 Copy `examples/minimal-repo/.agents/skills/design-system` into a project. Then copy or customize `examples/minimal-repo/DESIGN.md` at the project root.

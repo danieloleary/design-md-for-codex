@@ -1,5 +1,7 @@
 # QA
 
+Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+
 Proof that the showcase points at a real skill.
 
 ## Daily CI Check
@@ -32,6 +34,7 @@ It checks:
 
 - The public GitHub skill path downloads into a temp folder.
 - Required skill files exist.
+- Launch images and sharing docs exist.
 - `SKILL.md` passes Codex skill validation when the local validator is available.
 - The bundled `DESIGN.md` files pass `@google/design.md` lint.
 - `tokens.json` parses.
@@ -69,3 +72,17 @@ The repo includes one captured proof run:
 - `fixture/codex-result.md`: final Codex response.
 - `../assets/proof/fixture-before.png`: before screenshot.
 - `../assets/proof/fixture-after.png`: after screenshot.
+
+## Launch Images
+
+Regenerate the sharing kit after proof screenshots or launch copy change:
+
+```powershell
+python .\qa\generate-launch-assets.py
+```
+
+The generated files are:
+
+- `../assets/social-card.png`
+- `../assets/repo-banner.png`
+- `../assets/share-before-after.png`

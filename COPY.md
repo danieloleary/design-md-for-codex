@@ -4,7 +4,14 @@ Source of truth for the public voice.
 
 ## Direction
 
-Sharp. Direct. Useful. Inspired by Grok/xAI cadence: short claims, proof fast, no corporate fog. Do not copy xAI language, marks, or product identity.
+Sharp. Direct. Useful. Builder-first. Inspired by X/Grok cadence and Claude warmth: short claims, proof fast, no corporate fog. Do not copy xAI, Anthropic, Claude, X, Linear, or OpenAI brand identity.
+
+## Core Message
+
+- Make Codex remember your taste.
+- `DESIGN.md` is the memory. This skill is the habit.
+- Before: generic soup. After: governed workbench.
+- Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
 ## Landing Page
 
@@ -18,7 +25,7 @@ Navigation:
 Hero:
 
 - Codex skill + DESIGN.md
-- Give Codex taste. Make it use it.
+- Make Codex remember your taste.
 - Install one skill. Add `DESIGN.md`. Make every UI pass start from your rules.
 - Copy install prompt
 - Open Codex after copying
@@ -55,33 +62,18 @@ Proof:
 - Codex can ship loud default UI: gradients, blobs, pill buttons, huge radii, and a new visual system every screen.
 - With it
 - Codex reads `DESIGN.md`, applies the tokens, turns noise into a workbench, and checks desktop and mobile.
-- Before: generic SaaS soup
+- Before: generic soup
 - After: DESIGN.md workbench
-- SKILL.md
-- DESIGN.md
-- Minimal example
-- Codex result
 
-Test:
+Credit:
 
-- Run the proof
-- Two minutes. No hand-waving.
-- Install the skill, run the fixture, and watch a generic page move toward the rules.
-- Copy the install prompt.
-- Restart Codex.
-- Add `DESIGN.md`.
-- Run `$design-system Make this page follow DESIGN.md.`
-- Confirm Codex read or applied the rules in its response, diff, or rendered UI.
+- Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+- Fork it. Tune it. Make it yours.
 
-Files:
+## README Copy
 
-- What you get
-- Small folder. Real leverage.
-- Use the starter. Replace the taste. Keep the habit.
-
-## Core README Copy
-
-- Give Codex taste. Make it use it.
+- Make Codex remember your taste.
+- `DESIGN.md` is the memory. This skill is the habit.
 - This is a tiny Codex skill that makes the agent read `DESIGN.md` before it touches UI.
 - `DESIGN.md` puts product taste where agents can find it.
 - Write it once. Let every UI pass start there.
@@ -89,4 +81,3 @@ Files:
 - Replace it with your taste.
 - Codex moves fast. This repo checks itself every day.
 - Codex is better when it acts like it has been paying attention.
-- Fork it. Tune it. Make it yours.

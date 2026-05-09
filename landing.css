@@ -118,7 +118,8 @@ nav {
 .why,
 .proof,
 .test,
-.files {
+.files,
+.maker {
   width: 100%;
   margin: 0;
   padding: clamp(36px, 6vw, 72px) max(var(--gutter), calc((100% - var(--max)) / 2 + var(--gutter)));
@@ -264,7 +265,8 @@ pre {
 .why,
 .proof,
 .test,
-.files {
+.files,
+.maker {
   color: var(--ink);
   background: var(--paper);
 }
@@ -279,7 +281,8 @@ pre {
 .why h2,
 .proof h2,
 .test h2,
-.files h2 {
+.files h2,
+.maker h2 {
   font-size: clamp(28px, 4vw, 44px);
   line-height: 1.08;
   letter-spacing: 0;
@@ -288,11 +291,26 @@ pre {
 .why p,
 .proof p,
 .test p,
-.files p {
+.files p,
+.maker p {
   margin-top: 12px;
   color: var(--ink-muted);
   font-size: 16px;
   line-height: 1.6;
+}
+
+.share-preview {
+  margin: 32px 0 0;
+  max-width: 900px;
+}
+
+.share-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--paper-line);
+  border-radius: 8px;
+  background: var(--ink);
 }
 
 .reason-grid,
@@ -330,7 +348,8 @@ pre {
 
 .proof,
 .test,
-.files {
+.files,
+.maker {
   border-top: 1px solid var(--paper-line);
 }
 
@@ -406,7 +425,8 @@ pre {
 .why code,
 .proof code,
 .test code,
-.files code {
+.files code,
+.maker code {
   border-color: var(--paper-line);
   color: var(--ink);
   background: rgba(255, 255, 255, 0.6);
@@ -417,6 +437,15 @@ pre {
   grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
   gap: clamp(24px, 5vw, 54px);
   align-items: start;
+}
+
+.maker {
+  max-width: none;
+}
+
+.maker h2,
+.maker p {
+  max-width: 760px;
 }
 
 .file-list {
@@ -457,7 +486,8 @@ pre {
   .why,
   .proof,
   .test,
-  .files {
+  .files,
+  .maker {
     padding: 32px var(--gutter);
   }
 

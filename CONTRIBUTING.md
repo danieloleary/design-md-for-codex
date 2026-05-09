@@ -1,5 +1,7 @@
 # Contributing
 
+Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+
 Make it sharper. Keep it small.
 
 A good contribution makes the skill easier to install, easier to trust, or harder for Codex to ignore when it builds UI from `DESIGN.md`.

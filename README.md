@@ -1,8 +1,12 @@
 # design-md-for-codex
 
-Give Codex taste. Make it use it.
+![DESIGN.md is the memory. This skill is the habit.](assets/repo-banner.png)
 
-This is a tiny Codex skill that makes the agent read `DESIGN.md` before it touches UI. Use it when you are done repeating the same color, spacing, typography, component, and "make it less generic" feedback.
+Make Codex remember your taste.
+
+Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+
+This is a tiny Codex skill that makes the agent read `DESIGN.md` before it touches UI. `DESIGN.md` is the memory. This skill is the habit.
 
 ## Start
 
@@ -12,7 +16,7 @@ Paste this into Codex:
 Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
 ```
 
-Then do the obvious three:
+Then:
 
 1. Restart Codex.
 2. Add `DESIGN.md` at the root of your repo.
@@ -26,7 +30,9 @@ $design-system Make this page follow DESIGN.md.
 
 ## Why DESIGN.md Works
 
-`DESIGN.md` puts product taste where agents can find it. Colors. Type. Spacing. Components. Accessibility. Voice. No-go zones. Write it once. Let every UI pass start there.
+Prompts disappear. Rules remain. Codex knows where to look.
+
+`DESIGN.md` puts product taste where agents can find it: colors, type, spacing, components, accessibility, voice, and no-go zones. Write it once. Let every UI pass start there.
 
 ## What The Skill Does
 
@@ -57,26 +63,7 @@ Replace it with your taste.
 
 ## Prove It
 
-1. Copy the install prompt.
-2. Restart Codex.
-3. Add `DESIGN.md` to a repo.
-4. Run:
-   ```text
-   $design-system Make this page follow DESIGN.md.
-   ```
-5. Confirm Codex read or applied `DESIGN.md` by checking its response, diff, or rendered UI.
-
-Run the local smoke test:
-
-```powershell
-.\qa\smoke-test.ps1
-```
-
-Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and recent Codex system skills.
-
-## Actual Codex Run
-
-I ran the published skill against a deliberately loud `qa/fixture` in a throwaway copy.
+Before: generic soup. After: governed workbench.
 
 ![Before: loud generic SaaS UI](assets/proof/fixture-before.png)
 
@@ -84,9 +71,17 @@ I ran the published skill against a deliberately loud `qa/fixture` in a throwawa
 
 Artifacts:
 
-- `qa/fixture/index.html`: reusable bad starting point with generic SaaS soup.
+- `qa/fixture/index.html`: reusable bad starting point with generic soup.
 - `qa/fixture/after.html`: output from the Codex proof run.
 - `qa/fixture/codex-result.md`: final Codex response from the run.
+
+Run the local smoke test:
+
+```powershell
+.\qa\smoke-test.ps1
+```
+
+Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and the bundled Codex `skill-installer` and `skill-creator` helpers.
 
 ## Staying Current
 
@@ -96,23 +91,13 @@ Codex moves fast. This repo checks itself every day:
 .\qa\ci-check.ps1
 ```
 
-It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, and common encoding problems. See `MAINTAINING.md`.
+It verifies the public install path, GitHub Pages links, DESIGN.md linting with the latest validator, token parsing, required files, generated assets, and common encoding problems. See `MAINTAINING.md`.
 
-## Repo-Local Install
+## Share It
 
-Drop the skill into a project:
+Launch assets and ready-to-post copy live in `LAUNCH.md`. Distribution targets and follow-up catalog paths live in `SHARE.md`.
 
-```text
-.agents/
-  skills/
-    design-system/
-      SKILL.md
-      agents/openai.yaml
-      references/
-        DESIGN.md
-```
-
-Then put your project `DESIGN.md` at the repo root.
+The primary install path is this GitHub skill folder. Plugin packaging and an `openai/skills` catalog contribution are future distribution steps.
 
 ## Customize
 

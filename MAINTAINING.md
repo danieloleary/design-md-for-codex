@@ -1,5 +1,7 @@
 # Maintaining This Skill
 
+Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+
 Codex moves fast. This repo stays useful by checking the public skill, the docs, and the design files every day.
 
 ## Daily Drift Check
