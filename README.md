@@ -69,6 +69,11 @@ Before: Papyrus soup. After: governed workbench.
 
 ![After: Codex read DESIGN.md and turned it into a dark AI-image-backed workbench](assets/proof/fixture-after.png)
 
+Demo video:
+
+- `assets/demo-video.mp4`
+- `assets/demo-video-thumbnail.png`
+
 Artifacts:
 
 - `qa/fixture/index.html`: reusable bad starting point with Papyrus, generic soup, and drift.

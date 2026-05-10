@@ -16,6 +16,8 @@ Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 - Three-line pitch: Codex can build fast, but UI taste drifts without a source of truth. Put the rules in `DESIGN.md`. Install this skill so Codex reads those rules before building, reviewing, or refactoring UI.
 - Hero asset: `assets/social-card.png`
 - Proof asset: `assets/share-before-after.png`
+- Demo video: `assets/demo-video.mp4`
+- Demo video thumbnail: `assets/demo-video-thumbnail.png`
 - Repo banner: `assets/repo-banner.png`
 - Best proof link: `qa/fixture/codex-result.md`
 - Maintenance proof: `MAINTENANCE-CHECKLIST.md`
@@ -59,6 +61,7 @@ Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 - Confirm `MAINTENANCE-CHECKLIST.md` still matches the workflow.
 - Attach `assets/social-card.png` to X and LinkedIn.
 - Attach `assets/share-before-after.png` when the post is about proof.
+- Attach `assets/demo-video.mp4` when the post should feel more alive than a screenshot.
 - Link to the repo and the live showcase.
 - Pin the install prompt near the top of every long post.
 - Use `LAUNCH-TRACKER.md` to track channels, replies, follow-ups, and launch metrics.
@@ -82,6 +85,22 @@ Use $skill-installer to install https://github.com/danieloleary/design-md-for-co
 ```
 
 Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+
+## X Video Post
+
+I made a tiny Codex skill that makes UI taste stick.
+
+`DESIGN.md` is the memory.
+The skill is the habit.
+
+Before: generic soup.
+After: governed workbench.
+
+Repo:
+https://github.com/danieloleary/design-md-for-codex
+
+Attach:
+`assets/demo-video.mp4`
 
 ## LinkedIn Post
 
@@ -219,5 +238,6 @@ Launch-ready pass:
 - Added Dan O'Leary credit.
 - Added launch and sharing docs.
 - Added social/share image kit.
+- Added a demo video and thumbnail.
 - Kept the real before/after proof as the credibility anchor.
 - Verified install path, DESIGN.md linting, skill validation, responsive layout, and live Pages assets.

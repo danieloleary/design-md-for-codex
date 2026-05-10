@@ -107,3 +107,17 @@ The generated files are:
 - `../assets/social-card.png`
 - `../assets/repo-banner.png`
 - `../assets/share-before-after.png`
+
+## Demo Video
+
+Regenerate the launch demo video:
+
+```powershell
+python .\qa\generate-demo-video.py
+```
+
+The generated files are:
+
+- `../assets/demo-video.mp4`
+- `../assets/demo-video-thumbnail.png`
+- `output/launch-tonight/design-md-for-codex-demo.gif`

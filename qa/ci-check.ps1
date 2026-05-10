@@ -70,6 +70,8 @@ try {
     "assets/social-card.png",
     "assets/repo-banner.png",
     "assets/share-before-after.png",
+    "assets/demo-video.mp4",
+    "assets/demo-video-thumbnail.png",
     "assets/proof/fixture-before.png",
     "assets/proof/fixture-after.png",
     "assets/proof/ai-workbench-wide.png",
@@ -102,6 +104,7 @@ try {
     "qa/fixture/codex-result.md",
     "qa/fixture/expected.md",
     "qa/generate-launch-assets.py",
+    "qa/generate-demo-video.py",
     "qa/smoke-test.ps1"
   )
   foreach ($RelativePath in $RequiredFiles) {
