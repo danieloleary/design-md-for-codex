@@ -30,6 +30,10 @@ Use $skill-installer to install https://github.com/danieloleary/design-md-for-co
 
 ## Skill And Agent Directories
 
+- Codex Marketplace: https://www.codex-marketplace.com/submit
+  - Type: `SKILL`
+  - Target: `https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system`
+  - Requires GitHub OAuth before submission.
 - `openai/skills`: future catalog path if/when public Codex skill contribution is supported.
 - `skills.sh`: agent skills directory.
 - `agentskills.to`: agent skills marketplace.

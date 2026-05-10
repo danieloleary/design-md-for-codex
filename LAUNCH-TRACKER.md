@@ -36,6 +36,7 @@ Approve the channels you want to send now, or hold until tomorrow.
 | OpenAI Developers Discord | Dan | repo link | ready for approval |  | post after approval |  |
 | Friend email | Dan | repo link | ready for approval |  | email after approval |  |
 | GitHub release | Dan | release notes | live | `v0.1.4` | confirm release URL |  |
+| Codex Marketplace | Dan | skill folder URL | needs GitHub auth | `https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system` | submit at https://www.codex-marketplace.com/submit |  |
 | Skill directories | Dan | repo link | queued |  | submit after approval |  |
 
 ## Rollout Timeline
