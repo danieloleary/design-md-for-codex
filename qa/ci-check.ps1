@@ -63,6 +63,8 @@ try {
   Step "Checking required files"
   $RequiredFiles = @(
     "README.md",
+    "AGENTS.md",
+    "CLAUDE.md",
     "COPY.md",
     "index.html",
     "landing.css",
@@ -162,6 +164,8 @@ try {
 
   Step "Checking encoding"
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "README.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "AGENTS.md")
+  Assert-NoEncodingArtifacts (Join-Path $RepoRoot "CLAUDE.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "COPY.md")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "index.html")
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "landing.css")
