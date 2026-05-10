@@ -36,6 +36,7 @@ $RequiredFiles = @(
   "MAINTENANCE-CHECKLIST.md",
   "TROUBLESHOOTING.md",
   "FAQ.md",
+  "FEEDBACK.md",
   "package.json",
   "package-lock.json",
   "qa/visual-qa.mjs",
@@ -53,6 +54,23 @@ $RequiredFiles = @(
   "skills/design-system/references/tokens.json",
   "examples/minimal-repo/DESIGN.md",
   "examples/minimal-repo/.agents/skills/design-system/SKILL.md",
+  "examples/react-vite/README.md",
+  "examples/react-vite/DESIGN.md",
+  "examples/react-vite/package.json",
+  "examples/react-vite/package-lock.json",
+  "examples/react-vite/index.html",
+  "examples/react-vite/src/App.jsx",
+  "examples/react-vite/src/styles.css",
+  "examples/react-vite/.agents/skills/design-system/SKILL.md",
+  "examples/next-app/README.md",
+  "examples/next-app/DESIGN.md",
+  "examples/next-app/package.json",
+  "examples/next-app/package-lock.json",
+  "examples/next-app/next.config.mjs",
+  "examples/next-app/app/layout.jsx",
+  "examples/next-app/app/page.jsx",
+  "examples/next-app/app/globals.css",
+  "examples/next-app/.agents/skills/design-system/SKILL.md",
   "qa/fixture/DESIGN.md",
   "qa/fixture/index.html",
   "qa/fixture/after.html",
@@ -120,6 +138,7 @@ $TextFiles = @(
   "MAINTENANCE-CHECKLIST.md",
   "TROUBLESHOOTING.md",
   "FAQ.md",
+  "FEEDBACK.md",
   "skills/design-system/SKILL.md"
 )
 foreach ($RelativePath in $TextFiles) {
@@ -127,7 +146,13 @@ foreach ($RelativePath in $TextFiles) {
 }
 
 Step "Parsing package metadata"
-& node -e "JSON.parse(require('fs').readFileSync(process.argv[1], 'utf8')); JSON.parse(require('fs').readFileSync(process.argv[2], 'utf8'))" (Join-Path $Script:RepoRoot "package.json") (Join-Path $Script:RepoRoot "package-lock.json")
+& node -e "for (const file of process.argv.slice(1)) JSON.parse(require('fs').readFileSync(file, 'utf8'))" `
+  (Join-Path $Script:RepoRoot "package.json") `
+  (Join-Path $Script:RepoRoot "package-lock.json") `
+  (Join-Path $Script:RepoRoot "examples/react-vite/package.json") `
+  (Join-Path $Script:RepoRoot "examples/react-vite/package-lock.json") `
+  (Join-Path $Script:RepoRoot "examples/next-app/package.json") `
+  (Join-Path $Script:RepoRoot "examples/next-app/package-lock.json")
 if ($LASTEXITCODE -ne 0) { throw "Package metadata JSON parse failed." }
 Write-Host "OK package metadata parses"
 

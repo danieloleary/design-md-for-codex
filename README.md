@@ -65,6 +65,14 @@ The bundled `DESIGN.md` is a starter, not a law. Dan's default taste is dark-fir
 
 Replace it with your taste.
 
+## Examples
+
+- [`examples/minimal-repo`](examples/minimal-repo): the smallest repo-local install shape.
+- [`examples/react-vite`](examples/react-vite): a tiny React app ready for `$design-system`.
+- [`examples/next-app`](examples/next-app): a tiny Next app-router surface ready for `$design-system`.
+
+Use these to test the habit in a real frontend project: add `DESIGN.md`, run the skill, and review whether Codex preserved behavior while improving the interface.
+
 ## Demo And Proof
 
 Before: Papyrus soup. After: governed workbench.
@@ -123,6 +131,8 @@ Launch assets and ready-to-post copy live in `LAUNCH.md`. Distribution targets a
 The primary install path is this GitHub skill folder. Plugin packaging and an `openai/skills` catalog contribution are future distribution steps.
 
 GitHub issue templates are included for install bugs, skill behavior bugs, docs fixes, and example requests.
+
+Feedback is best as a GitHub issue for questions or bugs, and a pull request for concrete examples, wording fixes, compatibility notes, or better `DESIGN.md` starters. See [`FEEDBACK.md`](FEEDBACK.md).
 
 ## Customize
 

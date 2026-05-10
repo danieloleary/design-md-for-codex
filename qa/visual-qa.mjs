@@ -57,6 +57,13 @@ try {
     });
     const page = await context.newPage();
     await page.goto(url, { waitUntil: "load" });
+    await page
+      .waitForFunction(() =>
+        [...document.images].every(
+          (img) => img.complete && img.naturalWidth > 0,
+        ),
+      )
+      .catch(() => {});
 
     const metrics = await page.evaluate(() => {
       const html = document.documentElement;

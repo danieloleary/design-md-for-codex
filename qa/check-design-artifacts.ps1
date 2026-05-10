@@ -5,6 +5,8 @@ Step "Linting DESIGN.md files"
 $RootDesign = Join-Path $Script:RepoRoot "DESIGN.md"
 $BundledDesign = Join-Path $Script:RepoRoot "skills/design-system/references/DESIGN.md"
 $MinimalDesign = Join-Path $Script:RepoRoot "examples/minimal-repo/DESIGN.md"
+$ReactDesign = Join-Path $Script:RepoRoot "examples/react-vite/DESIGN.md"
+$NextDesign = Join-Path $Script:RepoRoot "examples/next-app/DESIGN.md"
 $FixtureDesign = Join-Path $Script:RepoRoot "qa/fixture/DESIGN.md"
 
 & npx --yes @google/design.md@latest lint $RootDesign
@@ -13,6 +15,10 @@ if ($LASTEXITCODE -ne 0) { throw "Root DESIGN.md lint failed." }
 if ($LASTEXITCODE -ne 0) { throw "Bundled DESIGN.md lint failed." }
 & npx --yes @google/design.md@latest lint $MinimalDesign
 if ($LASTEXITCODE -ne 0) { throw "Minimal DESIGN.md lint failed." }
+& npx --yes @google/design.md@latest lint $ReactDesign
+if ($LASTEXITCODE -ne 0) { throw "React example DESIGN.md lint failed." }
+& npx --yes @google/design.md@latest lint $NextDesign
+if ($LASTEXITCODE -ne 0) { throw "Next example DESIGN.md lint failed." }
 & npx --yes @google/design.md@latest lint $FixtureDesign
 if ($LASTEXITCODE -ne 0) { throw "QA fixture DESIGN.md lint failed." }
 

@@ -46,6 +46,12 @@ try {
   Require-File (Join-Path $RepoRoot "qa\fixture\index.html")
   Require-File (Join-Path $RepoRoot "qa\fixture\after.html")
   Require-File (Join-Path $RepoRoot "qa\fixture\codex-result.md")
+  Require-File (Join-Path $RepoRoot "examples\react-vite\DESIGN.md")
+  Require-File (Join-Path $RepoRoot "examples\react-vite\package-lock.json")
+  Require-File (Join-Path $RepoRoot "examples\react-vite\.agents\skills\design-system\SKILL.md")
+  Require-File (Join-Path $RepoRoot "examples\next-app\DESIGN.md")
+  Require-File (Join-Path $RepoRoot "examples\next-app\package-lock.json")
+  Require-File (Join-Path $RepoRoot "examples\next-app\.agents\skills\design-system\SKILL.md")
   Require-File (Join-Path $RepoRoot "assets\proof\fixture-before.png")
   Require-File (Join-Path $RepoRoot "assets\proof\fixture-after.png")
   Require-File (Join-Path $RepoRoot "assets\proof\ai-workbench-wide.png")
@@ -85,12 +91,18 @@ try {
   Step "Linting DESIGN.md files"
   $BundledDesign = Join-Path $RepoRoot "skills\design-system\references\DESIGN.md"
   $MinimalDesign = Join-Path $RepoRoot "examples\minimal-repo\DESIGN.md"
+  $ReactDesign = Join-Path $RepoRoot "examples\react-vite\DESIGN.md"
+  $NextDesign = Join-Path $RepoRoot "examples\next-app\DESIGN.md"
   $FixtureDesign = Join-Path $RepoRoot "qa\fixture\DESIGN.md"
 
   & npx --yes @google/design.md@latest lint $BundledDesign
   if ($LASTEXITCODE -ne 0) { throw "Bundled DESIGN.md lint failed." }
   & npx --yes @google/design.md@latest lint $MinimalDesign
   if ($LASTEXITCODE -ne 0) { throw "Minimal DESIGN.md lint failed." }
+  & npx --yes @google/design.md@latest lint $ReactDesign
+  if ($LASTEXITCODE -ne 0) { throw "React example DESIGN.md lint failed." }
+  & npx --yes @google/design.md@latest lint $NextDesign
+  if ($LASTEXITCODE -ne 0) { throw "Next example DESIGN.md lint failed." }
   & npx --yes @google/design.md@latest lint $FixtureDesign
   if ($LASTEXITCODE -ne 0) { throw "QA fixture DESIGN.md lint failed." }
 

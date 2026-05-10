@@ -42,6 +42,7 @@ It checks:
 - The public GitHub skill path downloads into a temp folder.
 - Required skill files exist.
 - Launch images and sharing docs exist.
+- React and Next starter examples include DESIGN.md and repo-local skill files.
 - `SKILL.md` passes Codex skill validation when the local validator is available.
 - The bundled `DESIGN.md` files pass `@google/design.md` lint.
 - `tokens.json` parses.
@@ -71,6 +72,20 @@ It checks:
    - governed generated imagery
    - compact controls
    - no radius above 8px
+
+## Framework Examples
+
+The React and Next examples are intentionally small. To verify they still run:
+
+```powershell
+cd examples\react-vite
+npm install
+npm run build
+
+cd ..\next-app
+npm install
+npm run build
+```
 
 ## Saved Proof Run
 
