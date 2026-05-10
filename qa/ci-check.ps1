@@ -1,12 +1,20 @@
+param(
+  [switch]$SkipPublicDrift
+)
+
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
-$Owner = "danieloleary"
-$Repo = "design-md-for-codex"
-$MainBranch = "main"
-$PagesRoot = "https://$Owner.github.io/$Repo"
-$GitHubRoot = "https://github.com/$Owner/$Repo"
-$SkillTreeUrl = "$GitHubRoot/tree/$MainBranch/skills/design-system"
+$ContractPath = Join-Path $RepoRoot "public-contract.json"
+$Contract = Get-Content -LiteralPath $ContractPath -Raw | ConvertFrom-Json
+$Owner = $Contract.repository.owner
+$Repo = $Contract.repository.name
+$MainBranch = $Contract.repository.branch
+$PagesRoot = $Contract.repository.pagesUrl.TrimEnd("/")
+$GitHubRoot = $Contract.repository.url.TrimEnd("/")
+$SkillPath = ($Contract.skill.path -replace "\\", "/").Trim("/")
+$SkillTreeUrl = $Contract.skill.url
+$InstallPrompt = $Contract.skill.installPrompt
 $TempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("design-md-ci-" + [guid]::NewGuid().ToString("N"))
 
 function Step($Message) {
@@ -62,6 +70,8 @@ try {
 
   Step "Checking required files"
   $RequiredFiles = @(
+    "public-contract.json",
+    "DESIGN.md",
     "README.md",
     "AGENTS.md",
     "CLAUDE.md",
@@ -113,12 +123,30 @@ try {
     Require-File (Join-Path $RepoRoot $RelativePath)
   }
 
+  Step "Checking public contract"
+  $ExpectedGitHubRoot = "https://github.com/$Owner/$Repo"
+  $ExpectedPagesRoot = "https://$Owner.github.io/$Repo"
+  $ExpectedSkillTreeUrl = "$GitHubRoot/tree/$MainBranch/$SkillPath"
+  $ExpectedInstallPrompt = "Use `$skill-installer to install $ExpectedSkillTreeUrl"
+  if ($GitHubRoot -ne $ExpectedGitHubRoot) { throw "public-contract.json repository.url must be $ExpectedGitHubRoot" }
+  if ($PagesRoot -ne $ExpectedPagesRoot) { throw "public-contract.json repository.pagesUrl must be $ExpectedPagesRoot/" }
+  if ($SkillTreeUrl -ne $ExpectedSkillTreeUrl) { throw "public-contract.json skill.url must be $ExpectedSkillTreeUrl" }
+  if ($InstallPrompt -ne $ExpectedInstallPrompt) { throw "public-contract.json skill.installPrompt must match the skill URL." }
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.readme)
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.rootDesign)
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.landingPage)
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.skillEntry)
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.designReference)
+  Write-Host "OK public contract"
+
   Step "Checking copy and install text"
   $IndexHtml = Get-Content (Join-Path $RepoRoot "index.html") -Raw
   $Readme = Get-Content (Join-Path $RepoRoot "README.md") -Raw
-  $ExpectedPrompt = "Use `$skill-installer to install $SkillTreeUrl"
-  if ($IndexHtml -notlike "*$ExpectedPrompt*") { throw "index.html does not include the expected install prompt." }
-  if ($Readme -notlike "*$ExpectedPrompt*") { throw "README.md does not include the expected install prompt." }
+  if ($IndexHtml -notlike "*$InstallPrompt*") { throw "index.html does not include the expected install prompt." }
+  if ($Readme -notlike "*$InstallPrompt*") { throw "README.md does not include the expected install prompt." }
+  if ($IndexHtml -notlike "*$($Contract.repository.pagesUrl)*") { throw "index.html does not include the expected Pages URL." }
+  if ($Readme -notlike "*$($Contract.repository.pagesUrl)*") { throw "README.md does not include the expected Pages URL." }
+  if ($IndexHtml -notlike "*$GitHubRoot*") { throw "index.html does not include the expected repo URL." }
   if ($IndexHtml -notmatch "data-copy-install") { throw "index.html is missing the copy install button hook." }
   Write-Host "OK install prompt and copy hook"
 
@@ -178,6 +206,8 @@ try {
   Assert-NoEncodingArtifacts (Join-Path $RepoRoot "skills/design-system/SKILL.md")
 
   Step "Linting DESIGN.md files with latest validator"
+  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "DESIGN.md")
+  if ($LASTEXITCODE -ne 0) { throw "Root DESIGN.md lint failed." }
   & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "skills/design-system/references/DESIGN.md")
   if ($LASTEXITCODE -ne 0) { throw "Bundled DESIGN.md lint failed." }
   & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "examples/minimal-repo/DESIGN.md")
@@ -194,41 +224,46 @@ try {
   if ($LASTEXITCODE -ne 0) { throw "Package metadata JSON parse failed." }
   Write-Host "OK package metadata parses"
 
-  Step "Checking public GitHub and Pages URLs"
-  Assert-Url "$PagesRoot/" "Dan O'Leary"
-  Assert-Url "$PagesRoot/assets/hero-art.png"
-  Assert-Url "$PagesRoot/assets/social-card.png"
-  Assert-Url "$PagesRoot/assets/repo-banner.png"
-  Assert-Url "$PagesRoot/assets/share-before-after.png"
-  Assert-Url "$PagesRoot/assets/proof/fixture-before.png"
-  Assert-Url "$PagesRoot/assets/proof/fixture-after.png"
-  Assert-Url "$PagesRoot/assets/proof/ai-workbench-wide.png"
-  Assert-Url "$PagesRoot/assets/proof/ai-workbench-detail.png"
-  Assert-Url "$PagesRoot/LAUNCH.md" "Launch Plan"
-  Assert-Url "$PagesRoot/LAUNCH-TRACKER.md" "Launch Tracker"
-  Assert-Url "$PagesRoot/SHARE.md" "Where To Share"
-  Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
-  Assert-Url "$PagesRoot/qa/smoke-test.ps1" "Smoke test passed"
-  Assert-Url "$GitHubRoot/blob/$MainBranch/skills/design-system/SKILL.md" "design-system"
-  Assert-Url "$GitHubRoot/blob/$MainBranch/qa/fixture/DESIGN.md" "Design Skill QA Fixture"
+  if ($SkipPublicDrift) {
+    Step "Skipping public drift checks"
+    Write-Host "OK public GitHub Pages/archive checks skipped for local or PR validation"
+  } else {
+    Step "Checking public GitHub and Pages URLs"
+    Assert-Url "$PagesRoot/" "Dan O'Leary"
+    Assert-Url "$PagesRoot/assets/hero-art.png"
+    Assert-Url "$PagesRoot/assets/social-card.png"
+    Assert-Url "$PagesRoot/assets/repo-banner.png"
+    Assert-Url "$PagesRoot/assets/share-before-after.png"
+    Assert-Url "$PagesRoot/assets/proof/fixture-before.png"
+    Assert-Url "$PagesRoot/assets/proof/fixture-after.png"
+    Assert-Url "$PagesRoot/assets/proof/ai-workbench-wide.png"
+    Assert-Url "$PagesRoot/assets/proof/ai-workbench-detail.png"
+    Assert-Url "$PagesRoot/LAUNCH.md" "Launch Plan"
+    Assert-Url "$PagesRoot/LAUNCH-TRACKER.md" "Launch Tracker"
+    Assert-Url "$PagesRoot/SHARE.md" "Where To Share"
+    Assert-Url "$PagesRoot/skills/design-system/references/DESIGN.md" "Codex Workshop Design System"
+    Assert-Url "$PagesRoot/qa/smoke-test.ps1" "Smoke test passed"
+    Assert-Url "$GitHubRoot/blob/$MainBranch/skills/design-system/SKILL.md" "design-system"
+    Assert-Url "$GitHubRoot/blob/$MainBranch/qa/fixture/DESIGN.md" "Design Skill QA Fixture"
 
-  Step "Checking public skill folder download"
-  New-Item -ItemType Directory -Force -Path $TempRoot | Out-Null
-  $ZipPath = Join-Path $TempRoot "repo.zip"
-  $ExtractPath = Join-Path $TempRoot "repo"
-  Invoke-WebRequest -Uri "https://codeload.github.com/$Owner/$Repo/zip/refs/heads/$MainBranch" -OutFile $ZipPath -TimeoutSec 60
-  Expand-Archive -LiteralPath $ZipPath -DestinationPath $ExtractPath -Force
-  $ExtractedSkill = Get-ChildItem -Path $ExtractPath -Directory -Recurse |
-    Where-Object {
-      $NormalizedPath = $_.FullName -replace "\\", "/"
-      $NormalizedPath -like "*/$Repo-$MainBranch/skills/design-system"
-    } |
-    Select-Object -First 1
-  if (-not $ExtractedSkill) { throw "Could not find skills/design-system in public repo archive." }
-  Require-File (Join-Path $ExtractedSkill.FullName "SKILL.md")
-  Require-File (Join-Path $ExtractedSkill.FullName "agents/openai.yaml")
-  Require-File (Join-Path $ExtractedSkill.FullName "references/DESIGN.md")
-  Write-Host "OK public archive contains installable skill folder"
+    Step "Checking public skill folder download"
+    New-Item -ItemType Directory -Force -Path $TempRoot | Out-Null
+    $ZipPath = Join-Path $TempRoot "repo.zip"
+    $ExtractPath = Join-Path $TempRoot "repo"
+    Invoke-WebRequest -Uri "https://codeload.github.com/$Owner/$Repo/zip/refs/heads/$MainBranch" -OutFile $ZipPath -TimeoutSec 60
+    Expand-Archive -LiteralPath $ZipPath -DestinationPath $ExtractPath -Force
+    $ExtractedSkill = Get-ChildItem -Path $ExtractPath -Directory -Recurse |
+      Where-Object {
+        $NormalizedPath = $_.FullName -replace "\\", "/"
+        $NormalizedPath -like "*/$Repo-$MainBranch/$SkillPath"
+      } |
+      Select-Object -First 1
+    if (-not $ExtractedSkill) { throw "Could not find skills/design-system in public repo archive." }
+    Require-File (Join-Path $ExtractedSkill.FullName "SKILL.md")
+    Require-File (Join-Path $ExtractedSkill.FullName "agents/openai.yaml")
+    Require-File (Join-Path $ExtractedSkill.FullName "references/DESIGN.md")
+    Write-Host "OK public archive contains installable skill folder"
+  }
 
   Step "CI check passed"
 } finally {

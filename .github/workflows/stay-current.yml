@@ -27,4 +27,82 @@ jobs:
 
       - name: Run CI check
         shell: pwsh
-        run: ./qa/ci-check.ps1
+        run: |
+          if ("${{ github.event_name }}" -eq "pull_request") {
+            ./qa/ci-check.ps1 -SkipPublicDrift
+          } else {
+            ./qa/ci-check.ps1
+          }
+
+  visual-qa:
+    name: Browser visual QA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Check whether visual QA is needed
+        id: visual_changes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            base="${{ github.event.pull_request.base.sha }}"
+            git diff --name-only "$base...HEAD" > changed-files.txt
+          elif [[ "${{ github.event_name }}" == "push" ]]; then
+            base="${{ github.event.before }}"
+            if [[ "$base" == "0000000000000000000000000000000000000000" ]]; then
+              git ls-tree -r --name-only HEAD > changed-files.txt
+            elif git cat-file -e "$base^{commit}" 2>/dev/null; then
+              git diff --name-only "$base..HEAD" > changed-files.txt
+            else
+              git ls-tree -r --name-only HEAD > changed-files.txt
+            fi
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          cat changed-files.txt
+
+          if grep -Eq '^(index\.html|landing\.css|assets/|qa/visual-qa\.mjs|package(-lock)?\.json)$' changed-files.txt; then
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Node
+        if: steps.visual_changes.outputs.should_run == 'true'
+        uses: actions/setup-node@v6
+        with:
+          node-version: "lts/*"
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.visual_changes.outputs.should_run == 'true'
+        run: npm ci
+
+      - name: Install Playwright browser
+        if: steps.visual_changes.outputs.should_run == 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Run visual QA
+        if: steps.visual_changes.outputs.should_run == 'true'
+        run: npm run visual-qa
+
+      - name: Upload browser QA artifacts
+        if: always() && steps.visual_changes.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-qa
+          path: output/browser-qa
+          if-no-files-found: ignore
+          retention-days: 14

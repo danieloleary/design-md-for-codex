@@ -10,6 +10,8 @@ This is a tiny Codex skill that makes the agent read `DESIGN.md` before it touch
 
 Watch the demo: [GitHub Pages showcase](https://danieloleary.github.io/design-md-for-codex/) or [direct MP4](https://danieloleary.github.io/design-md-for-codex/assets/demo-video.mp4).
 
+This repo dogfoods the idea: root [`DESIGN.md`](DESIGN.md) guides the showcase, while [`skills/design-system/references/DESIGN.md`](skills/design-system/references/DESIGN.md) is the reusable starter shipped inside the skill.
+
 ## Start
 
 Paste this into Codex:

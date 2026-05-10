@@ -1,0 +1,22 @@
+{
+  "repository": {
+    "owner": "danieloleary",
+    "name": "design-md-for-codex",
+    "branch": "main",
+    "url": "https://github.com/danieloleary/design-md-for-codex",
+    "pagesUrl": "https://danieloleary.github.io/design-md-for-codex/"
+  },
+  "skill": {
+    "id": "design-system",
+    "path": "skills/design-system",
+    "url": "https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system",
+    "installPrompt": "Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system"
+  },
+  "publicFiles": {
+    "rootDesign": "DESIGN.md",
+    "readme": "README.md",
+    "landingPage": "index.html",
+    "skillEntry": "skills/design-system/SKILL.md",
+    "designReference": "skills/design-system/references/DESIGN.md"
+  }
+}

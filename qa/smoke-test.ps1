@@ -1,8 +1,10 @@
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
-$SkillUrl = "https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system"
-$InstallPrompt = "Use `$skill-installer to install $SkillUrl"
+$Contract = Get-Content -LiteralPath (Join-Path $RepoRoot "public-contract.json") -Raw | ConvertFrom-Json
+$SkillUrl = $Contract.skill.url
+$InstallPrompt = $Contract.skill.installPrompt
+$SkillPath = ($Contract.skill.path -replace "\\", "/").Trim("/")
 $TempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("design-md-smoke-" + [guid]::NewGuid().ToString("N"))
 $InstallDest = Join-Path $TempRoot "skills"
 $Installer = Join-Path $env:USERPROFILE ".codex\skills\.system\skill-installer\scripts\install-skill-from-github.py"
@@ -33,11 +35,13 @@ try {
   Require-Command "npx"
 
   Step "Checking repo files"
-  Require-File (Join-Path $RepoRoot "skills\design-system\SKILL.md")
-  Require-File (Join-Path $RepoRoot "skills\design-system\agents\openai.yaml")
-  Require-File (Join-Path $RepoRoot "skills\design-system\references\DESIGN.md")
-  Require-File (Join-Path $RepoRoot "skills\design-system\references\theme.css")
-  Require-File (Join-Path $RepoRoot "skills\design-system\references\tokens.json")
+  Require-File (Join-Path $RepoRoot "public-contract.json")
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.rootDesign)
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.skillEntry)
+  Require-File (Join-Path $RepoRoot "$SkillPath\agents\openai.yaml")
+  Require-File (Join-Path $RepoRoot $Contract.publicFiles.designReference)
+  Require-File (Join-Path $RepoRoot "$SkillPath\references\theme.css")
+  Require-File (Join-Path $RepoRoot "$SkillPath\references\tokens.json")
   Require-File (Join-Path $RepoRoot "qa\fixture\DESIGN.md")
   Require-File (Join-Path $RepoRoot "qa\fixture\index.html")
   Require-File (Join-Path $RepoRoot "qa\fixture\after.html")
@@ -92,9 +96,9 @@ try {
 
   Step "Checking public URLs"
   $Urls = @(
-    "https://danieloleary.github.io/design-md-for-codex/",
-    "https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/SKILL.md",
-    "https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/references/DESIGN.md"
+    $Contract.repository.pagesUrl,
+    "$($Contract.repository.url)/blob/$($Contract.repository.branch)/$($Contract.publicFiles.skillEntry)",
+    "$($Contract.repository.url)/blob/$($Contract.repository.branch)/$($Contract.publicFiles.designReference)"
   )
   foreach ($Url in $Urls) {
     $Response = Invoke-WebRequest -Uri $Url -UseBasicParsing -TimeoutSec 20
