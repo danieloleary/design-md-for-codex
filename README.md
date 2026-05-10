@@ -87,6 +87,12 @@ Run the local smoke test:
 .\qa\smoke-test.ps1
 ```
 
+Verify the saved before/after proof:
+
+```powershell
+npm run fixture-qa
+```
+
 Prerequisites: PowerShell, Python, Node/npm with `npx`, network access, and the bundled Codex `skill-installer` and `skill-creator` helpers.
 
 Run browser QA when the landing page, copy button, or images change:

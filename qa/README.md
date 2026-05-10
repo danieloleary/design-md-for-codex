@@ -14,6 +14,13 @@ GitHub Actions runs this every day and on each push:
 
 It runs in the cloud and does not assume the Codex desktop app exists. It checks public URLs, required files, DESIGN.md linting, token parsing, install prompt text, and encoding artifacts.
 
+The wrapper is split by concern:
+
+- `check-public-contract.ps1`: contract fields, copy surfaces, and repeated install URLs.
+- `check-local-assets.ps1`: required files, local links, images, encoding, and package metadata.
+- `check-design-artifacts.ps1`: DESIGN.md linting, token parsing, and saved proof verification.
+- `check-public-drift.ps1`: live GitHub Pages, GitHub URLs, and public archive download.
+
 ## Smoke Test
 
 Run from the repo root:
@@ -38,6 +45,7 @@ It checks:
 - `SKILL.md` passes Codex skill validation when the local validator is available.
 - The bundled `DESIGN.md` files pass `@google/design.md` lint.
 - `tokens.json` parses.
+- The saved before/after fixture matches the expected DESIGN.md invariants.
 - Public Pages and GitHub links are reachable.
 
 ## Manual Codex Test
@@ -75,6 +83,12 @@ The repo includes one captured proof run:
 - `../assets/proof/fixture-after.png`: after screenshot.
 - `../assets/proof/ai-workbench-wide.png`: generated workbench image used in the after proof.
 - `../assets/proof/ai-workbench-detail.png`: generated detail image used in the after proof.
+
+Verify that proof directly:
+
+```powershell
+npm run fixture-qa
+```
 
 ## Visual QA
 

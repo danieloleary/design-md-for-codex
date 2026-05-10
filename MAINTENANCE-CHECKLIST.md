@@ -9,6 +9,7 @@ Codex changes fast. This repo should keep proving the same thing: the skill inst
 - Check the latest `Stay current` GitHub Action.
 - Run `.\qa\ci-check.ps1`.
 - Run `.\qa\smoke-test.ps1`.
+- Run `npm run fixture-qa` after changing the proof fixture, fixture screenshots, or fixture copy.
 - Run `npm run visual-qa` after landing page, image, or copy-button changes.
 - Confirm the live site loads: https://danieloleary.github.io/design-md-for-codex/
 - Confirm the install prompt still works:
@@ -43,6 +44,7 @@ Codex changes fast. This repo should keep proving the same thing: the skill inst
   ```powershell
   .\qa\ci-check.ps1
   .\qa\smoke-test.ps1
+  npm run fixture-qa
   npm run visual-qa
   python $env:USERPROFILE\.codex\skills\.system\skill-creator\scripts\quick_validate.py skills\design-system
   git diff --check
@@ -61,7 +63,7 @@ If `$skill-installer`, skill discovery, skill front matter, or Codex restart beh
 
 - Update the install prompt everywhere.
 - Update `qa/smoke-test.ps1`.
-- Update `qa/ci-check.ps1`.
+- Update `qa/ci-check.ps1` or the focused `qa/check-*.ps1` file.
 - Update `README.md` and `index.html`.
 - Add a short note to the release notes.
 - Prefer plain, tested instructions over one-click claims unless the one-click path is actually verified.

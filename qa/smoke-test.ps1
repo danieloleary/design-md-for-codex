@@ -83,16 +83,25 @@ try {
   }
 
   Step "Linting DESIGN.md files"
-  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "skills\design-system\references\DESIGN.md")
+  $BundledDesign = Join-Path $RepoRoot "skills\design-system\references\DESIGN.md"
+  $MinimalDesign = Join-Path $RepoRoot "examples\minimal-repo\DESIGN.md"
+  $FixtureDesign = Join-Path $RepoRoot "qa\fixture\DESIGN.md"
+
+  & npx --yes @google/design.md@latest lint $BundledDesign
   if ($LASTEXITCODE -ne 0) { throw "Bundled DESIGN.md lint failed." }
-  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "examples\minimal-repo\DESIGN.md")
+  & npx --yes @google/design.md@latest lint $MinimalDesign
   if ($LASTEXITCODE -ne 0) { throw "Minimal DESIGN.md lint failed." }
-  & npx --yes @google/design.md@latest lint (Join-Path $RepoRoot "qa\fixture\DESIGN.md")
+  & npx --yes @google/design.md@latest lint $FixtureDesign
   if ($LASTEXITCODE -ne 0) { throw "QA fixture DESIGN.md lint failed." }
 
   Step "Parsing tokens.json"
   Get-Content (Join-Path $RepoRoot "skills\design-system\references\tokens.json") | ConvertFrom-Json | Out-Null
   Write-Host "OK tokens.json parses"
+
+  Step "Verifying saved fixture proof"
+  $FixtureVerifier = Join-Path $RepoRoot "qa\verify-fixture.mjs"
+  & node $FixtureVerifier
+  if ($LASTEXITCODE -ne 0) { throw "Fixture verifier failed." }
 
   Step "Checking public URLs"
   $Urls = @(
