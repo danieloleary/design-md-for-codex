@@ -21,10 +21,10 @@
         <span>design-md-for-codex</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#start">Start</a>
+        <a href="#demo">Demo</a>
         <a href="#why">Why</a>
-        <a href="#test">Test</a>
-        <a href="#launch">Launch</a>
+        <a href="#proof">Proof</a>
+        <a href="#files">Files</a>
         <a href="https://github.com/danieloleary/design-md-for-codex">GitHub</a>
       </nav>
     </header>
@@ -34,147 +34,109 @@
         <div class="hero-copy">
           <p class="eyebrow">Codex skill + DESIGN.md</p>
           <h1>Make Codex remember your taste.</h1>
-          <p class="lede">Install one skill. Add <code>DESIGN.md</code>. Make every UI pass start from your rules.</p>
+          <p class="lede">Install one tiny skill, add <code>DESIGN.md</code>, and Codex starts UI work from your rules instead of inventing a new visual system every screen.</p>
           <div class="actions">
             <button class="button primary" type="button" data-copy-install>Copy install prompt</button>
-            <a class="button secondary" href="codex://">Open Codex after copying</a>
+            <a class="button secondary" href="#demo">Watch the demo</a>
           </div>
           <p class="copy-status" data-copy-status aria-live="polite">Copy it. Paste it into Codex. Restart once.</p>
         </div>
 
-        <aside class="start-card" id="start" aria-label="Quick start">
-          <h2>Install it</h2>
-          <p>Paste this into Codex. The built-in installer pulls the skill from GitHub.</p>
+        <aside class="install-panel" aria-label="Quick install">
+          <p class="panel-label">Install prompt</p>
           <pre><code id="installPrompt">Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system</code></pre>
-          <ol>
-            <li>Restart Codex.</li>
-            <li>Add or tune <code>DESIGN.md</code>.</li>
-            <li>Run <code>$design-system Make this page follow DESIGN.md.</code></li>
-          </ol>
+          <div class="steps" aria-label="Install steps">
+            <span>1. Paste</span>
+            <span>2. Restart</span>
+            <span>3. Run <code>$design-system</code></span>
+          </div>
         </aside>
       </section>
 
-      <section class="preview" aria-label="Design workflow preview">
-        <img src="assets/hero-art.png" alt="DESIGN.md, Codex, and a consistent UI connected as a simple workflow">
+      <section class="demo" id="demo" aria-label="Demo video">
+        <div class="section-copy">
+          <p class="eyebrow">Demo</p>
+          <h2>One prompt. One design file. Less slop.</h2>
+          <p>Watch the fixture go from loud generic UI to a governed workbench after Codex reads <code>DESIGN.md</code>.</p>
+        </div>
+        <figure class="video-frame">
+          <video controls preload="metadata" poster="assets/demo-video-thumbnail.png">
+            <source src="assets/demo-video.mp4" type="video/mp4">
+            <a href="assets/demo-video.mp4">Watch the demo video</a>
+          </video>
+          <figcaption>Actual project demo: install the skill, run the prompt, compare the before and after.</figcaption>
+        </figure>
       </section>
 
       <section class="why" id="why">
-        <div>
-          <p class="eyebrow">Why DESIGN.md works</p>
-          <h2>Your taste belongs in the repo.</h2>
-          <p>Prompts disappear. Rules remain. Codex knows where to look.</p>
+        <div class="section-copy">
+          <p class="eyebrow">Why DESIGN.md rocks</p>
+          <h2>Prompts disappear. Rules remain.</h2>
+          <p><code>DESIGN.md</code> puts taste where agents can find it: colors, type, spacing, components, accessibility, voice, and no-go zones.</p>
         </div>
         <div class="reason-grid">
           <article>
-            <h3>Rules travel with the code</h3>
-            <p>Colors, type, spacing, components, accessibility, voice, and no-go zones stay in one file.</p>
+            <h3>Taste lives in the repo</h3>
+            <p>Your design rules travel with the code, not with a forgotten chat thread.</p>
           </article>
           <article>
-            <h3>Prompts get smaller</h3>
-            <p>Stop retyping the same visual preferences every time Codex touches a screen.</p>
+            <h3>Prompts get shorter</h3>
+            <p>Stop re-explaining buttons, spacing, colors, shadows, and vibe every time.</p>
           </article>
           <article>
-            <h3>Reviews get sharper</h3>
-            <p>Give feedback once. Put it in the file. Let future work inherit it.</p>
+            <h3>Reviews get less repetitive</h3>
+            <p>Give feedback once, put it in the file, and let future UI work inherit it.</p>
           </article>
           <article>
             <h3>UI stops drifting</h3>
-            <p>New pages start from the same source instead of a fresh visual guess.</p>
+            <p>Codex starts from a source of truth instead of a fresh visual guess.</p>
           </article>
         </div>
       </section>
 
       <section class="proof" id="proof">
-        <div class="proof-copy">
-          <p class="eyebrow">The habit</p>
+        <div class="section-copy">
+          <p class="eyebrow">Before and after</p>
           <h2>Before: Papyrus soup. After: governed workbench.</h2>
-        </div>
-        <div class="proof-grid">
-          <article>
-            <h3>Without it</h3>
-            <p>Codex can ship loud default UI: gradients, blobs, pill buttons, huge radii, and a new visual system every screen.</p>
-          </article>
-          <article>
-            <h3>With it</h3>
-            <p>Codex reads <code>DESIGN.md</code>, applies the tokens, turns noise into a workbench, and checks desktop and mobile.</p>
-          </article>
+          <p>The skill does not promise magic. It creates a habit: read the file, apply the rules, check the screen.</p>
         </div>
         <div class="proof-media" aria-label="Actual Codex fixture before and after">
           <figure>
             <img src="assets/proof/fixture-before.png" alt="Before: loud Papyrus-style generic UI with parchment noise, gradients, huge rounded cards, and confused styling">
-            <figcaption>Before: Papyrus soup</figcaption>
+            <figcaption>Before: generic soup</figcaption>
           </figure>
           <figure>
             <img src="assets/proof/fixture-after.png" alt="After: dark DESIGN.md-aligned workbench with generated imagery, bordered surfaces, tight metrics, and a terracotta primary action">
-            <figcaption>After: AI-image workbench</figcaption>
+            <figcaption>After: governed workbench</figcaption>
           </figure>
-        </div>
-        <div class="link-row" aria-label="Project files">
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/SKILL.md">SKILL.md</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/references/DESIGN.md">DESIGN.md</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/examples/minimal-repo/DESIGN.md">Minimal example</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/qa/fixture/codex-result.md">Codex result</a>
         </div>
       </section>
 
       <section class="test" id="test">
-        <div>
-          <p class="eyebrow">Run the proof</p>
-          <h2>Two minutes. No hand-waving.</h2>
-          <p>Install the skill, run the fixture, and watch a generic page move toward the rules.</p>
+        <div class="section-copy">
+          <p class="eyebrow">Test it yourself</p>
+          <h2>Five steps. No mythology.</h2>
         </div>
         <ol class="test-list">
-          <li>Copy the install prompt.</li>
-          <li>Restart Codex.</li>
-          <li>Add <code>DESIGN.md</code>.</li>
+          <li>Copy the install prompt into Codex.</li>
+          <li>Restart Codex so the skill loads.</li>
+          <li>Add <code>DESIGN.md</code> to your repo.</li>
           <li>Run <code>$design-system Make this page follow DESIGN.md.</code></li>
-          <li>Confirm Codex read or applied the rules in its response, diff, or rendered UI.</li>
+          <li>Confirm Codex read the file and used the rules in the diff or rendered UI.</li>
         </ol>
       </section>
 
       <section class="files" id="files">
-        <div>
-          <p class="eyebrow">What you get</p>
+        <div class="section-copy">
+          <p class="eyebrow">Files</p>
           <h2>Small folder. Real leverage.</h2>
-          <p>Use the starter. Replace the taste. Keep the habit.</p>
+          <p>Use Dan's starter as a default, then replace it with your own taste.</p>
         </div>
         <div class="file-list">
           <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/SKILL.md">skills/design-system/SKILL.md</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/agents/openai.yaml">skills/design-system/agents/openai.yaml</a>
           <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/skills/design-system/references/DESIGN.md">skills/design-system/references/DESIGN.md</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/qa/smoke-test.ps1">qa/smoke-test.ps1</a>
-        </div>
-      </section>
-
-      <section class="launch" id="launch">
-        <div>
-          <p class="eyebrow">Ready to ship</p>
-          <h2>The launch kit is ready.</h2>
-          <p>Use the copy, proof images, tracker, and share list to launch without inventing the plan again at midnight.</p>
-        </div>
-        <div class="launch-console" aria-label="Launch kit command">
-          <p>Launch checklist:</p>
-          <pre><code>Confirm Actions are green. Confirm Pages is live. Use LAUNCH.md for posts, SHARE.md for channels, LAUNCH-TRACKER.md for signal, and MAINTENANCE-CHECKLIST.md for Codex drift.</code></pre>
-        </div>
-        <div class="launch-grid">
-          <article>
-            <h3>Copy ready</h3>
-            <p>X, LinkedIn handoff, friend email, OpenAI Forum, Discord, release notes, and replies.</p>
-          </article>
-          <article>
-            <h3>Proof ready</h3>
-            <p>Social card, repo banner, Papyrus-before screenshot, governed-after screenshot, and share image.</p>
-          </article>
-          <article>
-            <h3>Track the signal</h3>
-            <p>Stars, forks, replies, bugs, ideas, user-help asks, and high-signal builders.</p>
-          </article>
-        </div>
-        <div class="link-row" aria-label="Launch resources">
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/LAUNCH-TRACKER.md">Launch tracker</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/LAUNCH.md">Launch copy</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/SHARE.md">Where to share</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/MAINTENANCE-CHECKLIST.md">Stay current</a>
+          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/examples/minimal-repo/DESIGN.md">examples/minimal-repo/DESIGN.md</a>
+          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/qa/fixture/codex-result.md">qa/fixture/codex-result.md</a>
         </div>
       </section>
 
@@ -182,14 +144,12 @@
         <p class="eyebrow">Made by Dan O'Leary</p>
         <h2>For friends, builders, and people tired of generic AI UI.</h2>
         <p><code>DESIGN.md</code> is the memory. This skill is the habit. Fork it, tune it, and make Codex build like it has been paying attention.</p>
-        <div class="link-row" aria-label="Launch files">
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/LAUNCH.md">Launch copy</a>
-          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/SHARE.md">Where to share</a>
+        <div class="link-row" aria-label="Project links">
+          <a href="https://github.com/danieloleary/design-md-for-codex">GitHub repo</a>
+          <a href="https://github.com/danieloleary/design-md-for-codex/blob/main/README.md">README</a>
           <a href="assets/share-before-after.png">Share image</a>
+          <a href="assets/demo-video.mp4">Demo video</a>
         </div>
-        <figure class="share-preview">
-          <img src="assets/share-before-after.png" alt="Before Papyrus soup and after governed workbench comparison for design-md-for-codex">
-        </figure>
       </section>
     </main>
 

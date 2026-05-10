@@ -8,6 +8,8 @@ Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
 This is a tiny Codex skill that makes the agent read `DESIGN.md` before it touches UI. `DESIGN.md` is the memory. This skill is the habit.
 
+Watch the demo: [GitHub Pages showcase](https://danieloleary.github.io/design-md-for-codex/) or [direct MP4](https://danieloleary.github.io/design-md-for-codex/assets/demo-video.mp4).
+
 ## Start
 
 Paste this into Codex:
@@ -61,7 +63,7 @@ The bundled `DESIGN.md` is a starter, not a law. Dan's default taste is dark-fir
 
 Replace it with your taste.
 
-## Prove It
+## Demo And Proof
 
 Before: Papyrus soup. After: governed workbench.
 
@@ -69,10 +71,7 @@ Before: Papyrus soup. After: governed workbench.
 
 ![After: Codex read DESIGN.md and turned it into a dark AI-image-backed workbench](assets/proof/fixture-after.png)
 
-Demo video:
-
-- `assets/demo-video.mp4`
-- `assets/demo-video-thumbnail.png`
+Demo video: [assets/demo-video.mp4](assets/demo-video.mp4)
 
 Artifacts:
 
