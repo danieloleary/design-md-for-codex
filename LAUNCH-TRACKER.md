@@ -6,10 +6,11 @@ Use this during launch to track channels, replies, follow-ups, and feedback wort
 
 ## Status
 
-- Launch state: `ready`
+- Launch state: `ship later today - May 11, 2026`
 - GitHub Actions: `green`
 - GitHub Pages: `live`
-- Current release: `v0.1.4 - Launch operating kit`
+- Current commit: `f07113c - Add React and Next design skill examples`
+- Current release: `launch candidate - React and Next examples included`
 - Primary install path:
 
   ```text
@@ -19,32 +20,34 @@ Use this during launch to track channels, replies, follow-ups, and feedback wort
 ## Day 0 Approval Ping
 
 ```text
-Day 0 prep is ready: X post, LinkedIn handoff, friend email, OpenAI Forum/Discord draft, release notes, and reply tracker.
+Same-day launch prep is ready: X post, LinkedIn handoff, friend DM/email, OpenAI Forum/Discord draft, release notes, examples, and reply tracker.
 
-GitHub Actions are green. Pages is live. The install path works.
+GitHub Actions are green. Pages is live. The install path works. React and Next examples are in the repo.
 
-Approve the channels you want to send now, or hold until tomorrow.
+Approve the channels you want to send today.
 ```
 
 ## Channel Tracker
 
 | Channel | Owner | Asset | Status | Reply | Action | Follow-Up |
 | --- | --- | --- | --- | --- | --- | --- |
-| X | Dan | `assets/share-before-after.png` | ready for approval |  | post after approval |  |
-| LinkedIn | Dan | `assets/share-before-after.png` | handoff |  |  |  |
-| OpenAI Forum | Dan | repo link | ready for approval |  | post after approval |  |
-| OpenAI Developers Discord | Dan | repo link | ready for approval |  | post after approval |  |
-| Friend email | Dan | repo link | ready for approval |  | email after approval |  |
-| GitHub release | Dan | release notes | live | `v0.1.4` | confirm release URL |  |
+| X | Dan | `assets/share-before-after.png` | ready for today |  | post launch copy, then reply with install prompt |  |
+| X video reply | Dan | `assets/demo-video.mp4` | ready for today |  | post after first replies or as thread reply |  |
+| LinkedIn | Dan | `assets/share-before-after.png` | ready for later today |  | post after X has air |  |
+| OpenAI Forum | Dan | repo link | ready for today |  | ask for Codex skill best-practice feedback |  |
+| OpenAI Developers Discord | Dan | repo link | ready for today |  | ask people to break install docs |  |
+| Friend DM | Dan | repo link | ready for today |  | send to 5-10 builders |  |
+| Friend email | Dan | repo link | optional today |  | email if DMs feel too light |  |
+| GitHub release | Dan | release notes | optional today |  | publish if you want a formal release marker |  |
 | Codex Marketplace | Dan | skill folder URL | needs GitHub auth | `https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system` | submit at https://www.codex-marketplace.com/submit |  |
-| Skill directories | Dan | repo link | queued |  | submit after approval |  |
+| Skill directories | Dan | repo link | after feedback |  | submit after first install feedback |  |
 
 ## Rollout Timeline
 
 | Window | Goal | Action | Done |
 | --- | --- | --- | --- |
-| Day 0 | First useful launch | X, GitHub release, friend DM, update tracker |  |
-| Day 1 | Explain the workflow | LinkedIn, OpenAI Forum/Discord, reply to install questions |  |
+| May 11 | First useful launch | X, friend DM, OpenAI Forum/Discord, update tracker |  |
+| May 11 late | Broader builder story | LinkedIn, video reply, reply to install questions |  |
 | Day 3 | Show proof again | Before/after post, collect examples, open issues |  |
 | Day 7 | Build the community loop | Submit to directories, ask for examples, plan next release |  |
 
@@ -88,6 +91,18 @@ Approve the channels you want to send now, or hold until tomorrow.
 | DESIGN.md lint failed |  | docs fix / example fix | Dan |  |
 | User wants framework example |  | example repo | Dan / contributor |  |
 | Strong design critique |  | DESIGN.md update / visual pass | Dan |  |
+| React/Next example is too small |  | richer example / PR | Dan / contributor |  |
+| Current Codex skill practice changed |  | SKILL.md / MAINTAINING.md update | Dan |  |
+
+## Same-Day Success Bar
+
+- X post live.
+- 5 friend DMs sent.
+- OpenAI Forum or Discord feedback ask live.
+- At least 3 people asked to test one real screen.
+- Any install confusion captured above.
+- Any serious bug converted to a GitHub issue.
+- Any concrete improvement invited as a PR.
 
 ## Next Actions
 

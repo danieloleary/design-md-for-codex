@@ -2,172 +2,327 @@
 
 Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
+Ship target: later today, May 11, 2026.
+
 ## Launch Packet
 
 - Repo: https://github.com/danieloleary/design-md-for-codex
 - Live site: https://danieloleary.github.io/design-md-for-codex/
+- Demo video: https://danieloleary.github.io/design-md-for-codex/assets/demo-video.mp4
+- Primary asset: `assets/share-before-after.png`
+- Backup asset: `assets/social-card.png`
+- Repo banner: `assets/repo-banner.png`
+- Best proof: `qa/fixture/codex-result.md`
+- Framework examples:
+  - `examples/react-vite`
+  - `examples/next-app`
+- Feedback path: `FEEDBACK.md`
 - Install prompt:
 
   ```text
   Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
   ```
 
-- One-line pitch: Make Codex remember your taste. `DESIGN.md` is the memory. This skill is the habit.
-- Three-line pitch: Codex can build fast, but UI taste drifts without a source of truth. Put the rules in `DESIGN.md`. Install this skill so Codex reads those rules before building, reviewing, or refactoring UI.
-- Hero asset: `assets/social-card.png`
-- Proof asset: `assets/share-before-after.png`
-- Demo video: `assets/demo-video.mp4`
-- Demo video thumbnail: `assets/demo-video-thumbnail.png`
-- Repo banner: `assets/repo-banner.png`
-- Best proof link: `qa/fixture/codex-result.md`
-- Maintenance proof: `MAINTENANCE-CHECKLIST.md`
+## Core Story
 
-## Launch Calendar
-
-### Day 0: Ship The Useful Thing
-
-- Run `.\qa\ci-check.ps1` and `.\qa\smoke-test.ps1`.
-- Confirm GitHub Actions are green and Pages is live.
-- Post on X with `assets/share-before-after.png`.
-- Publish the GitHub release notes.
-- Send the short friend DM to 5-10 builders who will give real feedback.
-- Track every reply in `LAUNCH-TRACKER.md`.
-
-### Day 1: Explain The Habit
-
-- Post the LinkedIn version with the repo link and install prompt.
-- Share in OpenAI Forum or Discord with a direct ask for Codex skill feedback.
-- Reply to every install question with the same simple path: install, restart, add `DESIGN.md`, run `$design-system`.
-- Turn confusing replies into README fixes.
-
-### Day 3: Show The Proof
-
-- Share the before/after asset again with a shorter caption.
-- Ask for examples from people who tried it in real repos.
-- Open GitHub issues for bugs, install friction, or unclear docs.
-- Add one small improvement based on the strongest repeated question.
-
-### Day 7: Make It A Community Object
-
-- Submit to relevant skill and DESIGN.md directories from `SHARE.md`.
-- Ask for one contributor to add a framework-specific example.
-- Cut a follow-up release only if there is a real fix or useful example.
-- Update `LAUNCH-TRACKER.md` with what worked, what confused people, and what to build next.
-
-## Launch Checklist
-
-- Confirm `.\qa\ci-check.ps1` and `.\qa\smoke-test.ps1` pass.
-- Confirm GitHub Pages shows the latest before/after proof.
-- Confirm `MAINTENANCE-CHECKLIST.md` still matches the workflow.
-- Attach `assets/social-card.png` to X and LinkedIn.
-- Attach `assets/share-before-after.png` when the post is about proof.
-- Attach `assets/demo-video.mp4` when the post should feel more alive than a screenshot.
-- Link to the repo and the live showcase.
-- Pin the install prompt near the top of every long post.
-- Use `LAUNCH-TRACKER.md` to track channels, replies, follow-ups, and launch metrics.
-- Keep private helpers and internal execution notes out of the public repo.
-
-## One-Liner
-
-Make Codex remember your taste. `DESIGN.md` is the memory. This skill is the habit.
-
-## X Post
-
-I made a tiny Codex skill for people tired of re-prompting taste.
-
-Install one skill. Add `DESIGN.md`. Now Codex starts UI work from your design rules.
-
-Before: Papyrus soup.
-After: governed workbench.
+One-line pitch:
 
 ```text
-Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+Make Codex remember your taste. DESIGN.md is the memory. This skill is the habit.
 ```
 
-Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
+Three-line pitch:
 
-## X Video Post
+```text
+Codex can build fast, but UI taste drifts without a source of truth.
+Put the rules in DESIGN.md.
+Install this skill so Codex reads those rules before building, reviewing, or refactoring UI.
+```
 
-I made a tiny Codex skill that makes UI taste stick.
+Human version:
 
-`DESIGN.md` is the memory.
-The skill is the habit.
+```text
+I made this because I got tired of telling Codex the same design taste over and over.
+
+DESIGN.md puts taste in the repo.
+The skill makes Codex read it first.
+
+Less re-prompting. Less generic soup. More UI that feels like it belongs to the project.
+```
+
+## Ship Today Checklist
+
+### T-90 Minutes: Verify
+
+- Run `.\qa\ci-check.ps1`.
+- Run `.\qa\smoke-test.ps1`.
+- Run `npm run visual-qa`.
+- Confirm GitHub Actions are green.
+- Confirm Pages is live.
+- Open the live site once on desktop and phone.
+- Confirm these links work:
+  - https://github.com/danieloleary/design-md-for-codex
+  - https://danieloleary.github.io/design-md-for-codex/
+  - https://github.com/danieloleary/design-md-for-codex/tree/main/examples/react-vite
+  - https://github.com/danieloleary/design-md-for-codex/tree/main/examples/next-app
+
+### T-45 Minutes: Stage
+
+- Attach `assets/share-before-after.png` to the first X post.
+- Keep `assets/demo-video.mp4` ready for the second X post or reply.
+- Keep the live site and repo links open.
+- Copy the X post, LinkedIn post, and friend DM from this file.
+- Decide whether to publish a GitHub release today or after first feedback.
+
+### T-0: Post
+
+Recommended order:
+
+1. X launch post.
+2. Reply to your own X post with install prompt and demo link.
+3. Send 5-10 friend DMs.
+4. Post OpenAI Forum or Discord feedback ask.
+5. LinkedIn post later, after the X post has a little air.
+
+### T+30 Minutes: Work The Replies
+
+- Reply fast to install confusion.
+- Ask anyone technical to open an issue or PR.
+- Track useful replies in `LAUNCH-TRACKER.md`.
+- Turn repeated questions into README or FAQ changes tonight.
+
+### T+24 Hours: Follow Proof
+
+- Share the demo video or before/after again.
+- Mention the React and Next examples.
+- Ask for one real PR: better DESIGN.md, better example, or sharper docs.
+
+## What To Ask For
+
+Use GitHub issues for:
+
+- install bugs
+- skill discovery problems
+- broken links
+- confusing docs
+- DESIGN.md lint surprises
+
+Use pull requests for:
+
+- better examples
+- better `DESIGN.md` starters
+- framework notes
+- sharper copy
+- compatibility fixes
+
+Best ask:
+
+```text
+Try it on one real screen. If Codex still drifts, show me the DESIGN.md, the prompt, and the diff. Issues for bugs, PRs for fixes.
+```
+
+## X Launch Post
+
+Attach: `assets/share-before-after.png`
+
+```text
+I made a tiny Codex skill for a problem I keep hitting: taste drift.
+
+Codex can build fast. But without a source of truth it starts inventing spacing, colors, button shapes, and layout patterns screen by screen.
+
+So I made DESIGN.md the memory.
+And this skill the habit.
+
+Install one skill. Add DESIGN.md. Ask Codex to build, review, or refactor UI from your rules.
+
+Repo:
+https://github.com/danieloleary/design-md-for-codex
+
+Made for friends, builders, and people tired of generic AI UI.
+```
+
+Reply to your own X post:
+
+```text
+Install prompt:
+
+Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+
+Then restart Codex and try:
+
+$design-system Make this page follow DESIGN.md.
+
+Live demo:
+https://danieloleary.github.io/design-md-for-codex/
+```
+
+## Short X Alt
+
+Attach: `assets/social-card.png`
+
+```text
+Make Codex remember your taste.
+
+DESIGN.md is the memory.
+This tiny skill is the habit.
+
+Repo:
+https://github.com/danieloleary/design-md-for-codex
+```
+
+## X Video Follow-Up
+
+Attach: `assets/demo-video.mp4`
+
+```text
+The whole trick:
+
+1. Put design rules in DESIGN.md
+2. Install the Codex skill
+3. Ask for a UI pass
 
 Before: generic soup.
 After: governed workbench.
 
-Repo:
-https://github.com/danieloleary/design-md-for-codex
-
-Attach:
-`assets/demo-video.mp4`
+Demo + repo:
+https://danieloleary.github.io/design-md-for-codex/
+```
 
 ## LinkedIn Post
 
-I made a small Codex skill that solves a very familiar AI UI problem: taste drift.
+Attach: `assets/share-before-after.png`
 
-Codex can build fast, but without a source of truth it can invent new spacing, colors, button shapes, and layout patterns screen by screen.
+```text
+I made a small Codex skill for a problem I keep running into: taste drift.
+
+AI coding agents are fast, but without a source of truth they can invent a new visual system every screen: spacing, colors, button shapes, cards, gradients, all of it.
 
 The fix is simple:
 
-1. Put your design taste in `DESIGN.md`.
-2. Install this skill.
-3. Ask Codex to build, review, or refactor UI.
+1. Put your design taste in DESIGN.md.
+2. Install this Codex skill.
+3. Ask Codex to build, review, or refactor UI from those rules.
 
-`DESIGN.md` is the memory. This skill is the habit.
+DESIGN.md is the memory. The skill is the habit.
+
+The repo includes:
+- the skill package
+- a starter DESIGN.md
+- React and Next examples
+- before/after proof
+- a smoke test and daily checks
 
 Repo:
 https://github.com/danieloleary/design-md-for-codex
 
-Install prompt:
+Live demo:
+https://danieloleary.github.io/design-md-for-codex/
 
-```text
-Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+Made for friends, builders, and people tired of generic AI UI.
 ```
-
-Made by Dan O'Leary for friends, builders, and people tired of generic AI UI.
 
 ## OpenAI Forum / Discord Post
 
-I built a tiny Codex skill around `DESIGN.md`.
+```text
+I built a tiny Codex skill around DESIGN.md and would love feedback from people using Codex for UI work.
 
-The goal: stop re-prompting visual taste every time Codex touches UI. The skill tells Codex to find and read `DESIGN.md` first, apply the documented colors/type/spacing/component rules, and verify desktop/mobile when UI changes.
+Goal: stop re-prompting visual taste. The skill makes Codex find and read DESIGN.md before building, reviewing, or refactoring UI, then apply the documented colors/type/spacing/component/accessibility rules.
 
 Install:
 
-```text
 Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
-```
 
 Repo:
 https://github.com/danieloleary/design-md-for-codex
 
-Would love feedback from anyone building UI with Codex, agent skills, or DESIGN.md files.
+Live demo:
+https://danieloleary.github.io/design-md-for-codex/
 
-## GitHub Release Copy
+I am especially looking for:
+- does the skill match current Codex skill best practices?
+- does install/restart behavior feel clear?
+- what would make the React or Next examples more useful?
+- where does Codex still drift even after reading DESIGN.md?
 
-`design-md-for-codex` is ready to try.
-
-It packages one Codex skill:
-
-```text
-skills/design-system
+Issues for bugs. PRs very welcome for better examples, better DESIGN.md starters, or compatibility notes.
 ```
 
-The skill makes Codex read `DESIGN.md` before UI work, then apply the repo's colors, type, spacing, component rules, accessibility notes, and no-go zones.
+## Friend DM
 
-This release includes:
+```text
+I made a little Codex skill I think you might actually use.
 
-- GitHub install path.
-- Starter `DESIGN.md`, CSS theme, and design tokens.
-- Minimal repo example.
-- QA fixture with before/after proof.
-- Daily drift check for Codex and DESIGN.md changes.
-- Launch kit and sharing copy.
+It makes Codex read DESIGN.md before touching UI, so you stop re-explaining colors, spacing, and "make it less generic" every time.
+
+Repo:
+https://github.com/danieloleary/design-md-for-codex
+
+Would love one sharp test: try it on one screen and send me the diff. If it works, amazing. If it drifts, even better feedback.
+```
+
+## Email To Builder Friends
+
+Subject:
+
+```text
+Tiny Codex skill for keeping UI taste from drifting
+```
+
+Body:
+
+```text
+Hey,
+
+I made a small Codex skill that makes the agent read DESIGN.md before touching UI.
+
+The idea is simple: put design taste in the repo, then make Codex build from that source of truth instead of re-prompting the same preferences every session.
+
+Repo:
+https://github.com/danieloleary/design-md-for-codex
+
+Live demo:
+https://danieloleary.github.io/design-md-for-codex/
 
 Install:
 
+Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
+
+If you try it, I would love the sharpest feedback you have. Best possible test: use it on one real screen and send me the diff.
+
+Dan
+```
+
+## GitHub Release Copy
+
+Title:
+
 ```text
+Design.md for Codex: same-day launch candidate
+```
+
+Body:
+
+```text
+This release packages a tiny Codex skill that makes agents read DESIGN.md before UI work.
+
+The skill helps Codex:
+- find the repo design source
+- apply colors, type, spacing, components, accessibility rules, and no-go zones
+- avoid inventing a new visual system every screen
+- verify desktop and mobile after UI changes
+
+This launch pass includes:
+- GitHub install path
+- starter DESIGN.md, theme.css, and tokens.json
+- minimal repo example
+- React + Vite example
+- Next app-router example
+- before/after proof fixture
+- demo video
+- smoke test, visual QA, and daily drift checks
+
+Install:
+
 Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
 ```
 
@@ -185,59 +340,27 @@ Because rules only help if Codex reads them. The skill turns "please remember my
 
 The starter has Dan's default taste: dark command surfaces, warm paper sections, terracotta accent, tight borders, no generic UI soup. Replace the `DESIGN.md` with your own taste and keep the habit.
 
+### Does it work with React or Next?
+
+Yes. The repo now includes small React + Vite and Next app-router examples. They are deliberately simple so people can test whether Codex reads `DESIGN.md` and improves the UI without changing behavior.
+
 ### Does it keep up with Codex changes?
 
 The repo has a daily GitHub Action plus local smoke tests. See `MAINTAINING.md` and `MAINTENANCE-CHECKLIST.md`.
 
-## Friend DM
+## Tonight's Success Bar
 
-I made a little Codex skill you might actually use.
+Minimum good launch:
 
-It makes Codex read `DESIGN.md` before touching UI, so you stop re-explaining colors, spacing, and "make it less generic" every time.
+- X post live.
+- 5 friend DMs sent.
+- OpenAI Forum or Discord post live.
+- At least 3 people asked to try one screen.
+- Any confusion captured in `LAUNCH-TRACKER.md`.
 
-Paste this into Codex:
+Great launch:
 
-```text
-Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
-```
-
-Then restart Codex and try:
-
-```text
-$design-system Make this page follow DESIGN.md.
-```
-
-## Email To Builder Friends
-
-Subject: Tiny Codex skill for keeping UI taste from drifting
-
-Hey,
-
-I made a small Codex skill that makes the agent read `DESIGN.md` before touching UI.
-
-The idea is simple: put design taste in the repo, then make Codex build from that source of truth instead of re-prompting the same preferences every session.
-
-Repo:
-https://github.com/danieloleary/design-md-for-codex
-
-Install:
-
-```text
-Use $skill-installer to install https://github.com/danieloleary/design-md-for-codex/tree/main/skills/design-system
-```
-
-If you try it, I would love the sharpest feedback you have.
-
-Dan
-
-## Release Notes
-
-Launch-ready pass:
-
-- Rewrote public copy around `Make Codex remember your taste`.
-- Added Dan O'Leary credit.
-- Added launch and sharing docs.
-- Added social/share image kit.
-- Added a demo video and thumbnail.
-- Kept the real before/after proof as the credibility anchor.
-- Verified install path, DESIGN.md linting, skill validation, responsive layout, and live Pages assets.
+- One issue opened by someone else.
+- One PR or concrete example request.
+- One person tries the React or Next example.
+- One README/FAQ fix made from real feedback.
