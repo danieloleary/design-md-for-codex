@@ -126,19 +126,15 @@ Try it on one real screen. If Codex still drifts, show me the DESIGN.md, the pro
 Attach: `assets/share-before-after.png`
 
 ```text
-I made a tiny Codex skill for a problem I keep hitting: taste drift.
+I made a tiny Codex skill for taste drift.
 
-Codex can build fast. But without a source of truth it starts inventing spacing, colors, button shapes, and layout patterns screen by screen.
+Codex can build fast, but UI taste drifts without a source of truth.
 
-So I made DESIGN.md the memory.
-And this skill the habit.
-
-Install one skill. Add DESIGN.md. Ask Codex to build, review, or refactor UI from your rules.
+DESIGN.md is the memory.
+The skill is the habit.
 
 Repo:
 https://github.com/danieloleary/design-md-for-codex
-
-Made for friends, builders, and people tired of generic AI UI.
 ```
 
 Reply to your own X post:
